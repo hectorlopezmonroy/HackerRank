@@ -130,5 +130,6 @@ public class SuperReducedString {
         String s = in.next();
         String result = super_reduced_string(s);
         System.out.println(result);
+        in.close();
     }
 }

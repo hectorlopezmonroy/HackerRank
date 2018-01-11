@@ -57,5 +57,6 @@ public class Staircase {
             }
             System.out.println();
         }
+        in.close();
     }
 }
