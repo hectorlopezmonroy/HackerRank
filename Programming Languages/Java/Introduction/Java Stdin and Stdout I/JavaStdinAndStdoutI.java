@@ -52,6 +52,7 @@
 import java.util.Scanner;
 
 public class JavaStdinAndStdoutI {
+
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int[] arr = new int[3];
@@ -59,9 +60,9 @@ public class JavaStdinAndStdoutI {
         for (int i = 0; i < 3; i++) {
             arr[i] = in.nextInt();
         }
+        in.close();
         for (int i = 0; i < arr.length; i++) {
             System.out.println(arr[i]);
         }
-        in.close();
     }
 }
