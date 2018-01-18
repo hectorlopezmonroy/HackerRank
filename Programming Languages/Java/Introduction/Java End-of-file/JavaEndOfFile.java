@@ -3,10 +3,10 @@
  * computer operating system where no more data can be read from a data source."
  * - (Wikipedia: End-of-file)
  *
- * The here is to read 'n' lines of input until you reach EOF, then number and
- * print all 'n' lines of content.
+ * The challenge here is to read 'n' lines of input until you reach EOF, then
+ * number and print all 'n' lines of content.
  *
- * Hint: Java's Scanner.hasNext() method is helpful for this problem.]
+ * Hint: Java's Scanner.hasNext() method is helpful for this problem.
  *
  * Input Format
  *
@@ -35,6 +35,7 @@ import java.util.Scanner;
 import java.util.LinkedList;
 
 public class JavaEndOfFile {
+
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         LinkedList<String> myList = new LinkedList<String>();
@@ -43,7 +44,8 @@ public class JavaEndOfFile {
             myList.add(in.nextLine());
         }
         in.close();
-        for (int i = 0; i < myList.size();i++) {
+
+        for (int i = 0; i < myList.size(); i++) {
             System.out.println((i + 1) + " " + myList.get(i));
         }
     }

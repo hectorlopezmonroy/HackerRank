@@ -17,7 +17,7 @@
  * Input Format
  *
  * There are two lines of input. The first line contains 'B': the breadth of the
- * parallelogram. The next line contains 'H': the height ofthe parallelogram.
+ * parallelogram. The next line contains 'H': the height of the parallelogram.
  *
  * Constraints
  *
@@ -53,6 +53,7 @@
 import java.util.Scanner;
 
 public class JavaStaticInitializerBlock {
+
     public static int B = 0;
     public static int H = 0;
     public static boolean flag = false;

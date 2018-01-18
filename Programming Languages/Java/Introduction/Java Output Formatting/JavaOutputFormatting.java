@@ -32,6 +32,7 @@
  * java           100
  * cpp            065
  * python         050
+ * ================================
  *
  * Explanation
  *
@@ -43,10 +44,11 @@
 import java.util.Scanner;
 
 public class JavaOutputFormatting {
+
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        String [] stringArr = new String[3];
         int tmp;
+        Scanner in = new Scanner(System.in);
+        String[] stringArr = new String[3];
 
         for (int i = 0; i < 3; i++) {
             stringArr[i] = in.next();
@@ -63,6 +65,7 @@ public class JavaOutputFormatting {
             }
         }
         in.close();
+
         System.out.println("================================");
         for (String s: stringArr) {
             System.out.println(s);

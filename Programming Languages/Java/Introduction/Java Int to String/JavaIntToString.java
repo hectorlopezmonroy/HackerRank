@@ -28,8 +28,8 @@ public class JavaIntToString {
         try {
             Scanner in = new Scanner(System.in);
             int n = in.nextInt();
-            String s = Integer.toString(n);
             in.close();
+            String s = Integer.toString(n);
 
             if (n == Integer.parseInt(s)) {
                 System.out.println("Good job");

@@ -1,7 +1,7 @@
 /*
  * Given a double-precision number, 'payment', denoting an amount of money, use
- * the NumberFormat class' getCurrencyInstance method to convert 'payment' into
- * the US, Indian, Chinese, and French currency formats. Then print the
+ * the NumberFormat class' 'getCurrencyInstance' method to convert 'payment'
+ * into the US, Indian, Chinese, and French currency formats. Then print the
  * formatted values as follows:
  *
  * US: formattedPayment
@@ -12,7 +12,7 @@
  * where 'formattedPayment' is 'payment' formatted according to the appropriate
  * Locale's currency.
  *
- * Note: India does not have built-in Locale, so you must construct one where
+ * Note: India does not have a built-in Locale, so you must construct one where
  * the language is 'en' (i.e., English).
  *
  * Input Format

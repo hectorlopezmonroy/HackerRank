@@ -16,7 +16,7 @@
  *
  * 0 <= q <= 500
  *
- * 0 <= a, b, <= 50
+ * 0 <= a, b <= 50
  *
  * 1 <= n <= 15
  *
@@ -67,13 +67,14 @@
  *
  *    s_4 = 5 + 1 * 3 + 2 * 3 + 4 * 3 + 8 * 3 + 16 * 3 = 98
  *
- * We then print each element of our series as a single line of space-separated
- * values.
+ *    We then print each element of our series as a single line of
+ *    space-separated values.
  */
 
 import java.util.Scanner;
 
 public class JavaLoopsII {
+
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int numQueries = in.nextInt();
@@ -85,6 +86,7 @@ public class JavaLoopsII {
             intArr[i][2] = in.nextInt();
         }
         in.close();
+
         for (int i = 0; i < intArr.length; i++) {
             for (int j = 0; j < intArr[i][2]; j++) {
                 double tmp = intArr[i][0];

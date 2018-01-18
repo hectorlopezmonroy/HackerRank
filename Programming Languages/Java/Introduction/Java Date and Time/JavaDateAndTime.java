@@ -82,6 +82,7 @@ public class JavaDateAndTime {
         String month = in.next();
         String day = in.next();
         String year = in.next();
+        in.close();
 
         System.out.println(getDay(day, month, year));
     }

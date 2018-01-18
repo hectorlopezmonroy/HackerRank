@@ -61,10 +61,11 @@
 import java.util.Scanner;
 
 public class JavaIfElse {
+
     public static void main(String[] args) {
+        String res = "";
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
-        String res = "";
         in.close();
 
         if (n % 2 != 0) {

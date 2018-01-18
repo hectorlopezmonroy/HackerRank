@@ -123,14 +123,16 @@ public class JavaDatatypes {
             String s = in.next();
             Pair tmp = new Pair();
             try {
-                // In order to represent which datatypes can store string s'
-                // numerical value, I'll use something similar to the system in
-                // place to represent files permissions in linux (octal numbers),
-                // so that an integer that can be stored as a byte (the smallest
-                // size) can also be stored in a short, an int and a long. But not
-                // necessarily an integer that can be stored in a long fits in a
-                // byte.
-                // So, the order is long (2^3), int (2^2), short(2^1) and byte (2^0)
+                /* In order to represent which datatypes can store string s'
+                 * numerical value, I'll use something similar to the system in
+                 * place to represent files permissions in linux (octal numbers),
+                 * so that an integer that can be stored as a byte (the smallest
+                 * size) can also be stored in a short, an int and a long. But
+                 * not necessarily an integer that can be stored in a long fits
+                 * in a byte.
+                 * So, the order is long (2^3), int (2^2), short(2^1) and
+                 * byte (2^0).
+                 */
 
                 long l = Long.parseLong(s);
                 if (-128 <= l && l <= 127) {
