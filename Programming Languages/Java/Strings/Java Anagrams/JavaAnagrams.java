@@ -87,8 +87,8 @@
  * print "Anagrams".
  */
 
-import java.util.Scanner;
 import java.util.HashMap;
+import java.util.Scanner;
 
 public class JavaAnagrams {
 

@@ -24,6 +24,7 @@
  * Constraints
  *
  * 1 <= |s| <= 1000
+ *
  * 's' consists of English alphabetic letters only (i.e., [a-zA-Z]).
  *
  * Output Format

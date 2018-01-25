@@ -85,16 +85,21 @@ public class ValidUsernameRegularExpression {
 
     public static void main(String[] args) {
         int n = Integer.parseInt(in.nextLine());
+        String[] res = new String[n];
 
         while (n-- != 0) {
             String userName = in.nextLine();
 
             if (userName.matches(UsernameValidator.regularExpression)) {
-                System.out.println("Valid");
+                res[res.length - (n + 1)] = "Valid";
             } else {
-                System.out.println("Invalid");
+                res[res.length - (n + 1)] = "Invalid";
             }
         }
         in.close();
+
+        for (String s : res) {
+            System.out.println(s);
+        }
     }
 }

@@ -94,6 +94,7 @@ public class JavaRegex2DuplicateWords {
         Pattern p = Pattern.compile(regex, Pattern.CASE_INSENSITIVE);
         Scanner in = new Scanner(System.in);
         int numSentences = Integer.parseInt(in.nextLine());
+        String[] res = new String[numSentences];
 
         while (numSentences-- > 0) {
             String input = in.nextLine();
@@ -104,9 +105,13 @@ public class JavaRegex2DuplicateWords {
                 input = input.replaceAll(m.group(), m.group(1));
             }
 
-            // Prints the modified sentence.
-            System.out.println(input);
+            res[res.length - (numSentences + 1)] = input;
         }
         in.close();
+
+        // Prints the modified sentence.
+        for (String s : res) {
+            System.out.println(s);
+        }
     }
 }

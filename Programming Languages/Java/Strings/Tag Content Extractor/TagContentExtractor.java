@@ -55,6 +55,7 @@
  */
 
 import java.util.Scanner;
+import java.util.LinkedList;
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
 
@@ -65,6 +66,7 @@ public class TagContentExtractor {
         Pattern p = Pattern.compile(regex);
         Scanner in = new Scanner(System.in);
         int testCases = Integer.parseInt(in.nextLine());
+        LinkedList<String> res = new LinkedList<String>();
 
         while (testCases > 0) {
             boolean matchFound = false;
@@ -72,14 +74,18 @@ public class TagContentExtractor {
             Matcher m = p.matcher(input);
 
             while (m.find()) {
-                System.out.println(m.group(2));
+                res.add(m.group(2));
                 matchFound = true;
             }
             if (!matchFound) {
-                System.out.println("None");
+                res.add("None");
             }
             testCases--;
         }
         in.close();
+
+        for (String s : res) {
+            System.out.println(s);
+        }
     }
 }

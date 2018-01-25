@@ -69,12 +69,13 @@ public class JavaRegex {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
+        MyRegex regex = new MyRegex();
         LinkedList<Boolean> res = new LinkedList<Boolean>();
 
         try {
             while (in.hasNext()) {
                 String IP = in.next();
-                res.add(IP.matches(new MyRegex().pattern));
+                res.add(IP.matches(regex.pattern));
             }
         } catch (PatternSyntaxException e) {
             System.out.println("The regular expression syntax is invalid.");
