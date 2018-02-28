@@ -59,6 +59,7 @@ import java.util.Scanner;
 import java.util.Comparator;
 
 class Student {
+
     private int id;
     private float cgpa;
     private String name;
@@ -115,9 +116,10 @@ public class JavaSort {
         }
         in.close();
 
-        // Sort the array as requested
+        // Sorts the array as requested
         Arrays.sort(students, checker);
-        // Print the ordered array data as requested
+
+        // Prints the ordered array data as requested
         for (Student s : students) {
             System.out.println(s.getName());
         }

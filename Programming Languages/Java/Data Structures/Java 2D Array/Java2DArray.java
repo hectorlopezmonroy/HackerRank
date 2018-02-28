@@ -70,6 +70,7 @@ public class Java2DArray {
         int[][] arr = new int[6][6];
         Scanner in = new Scanner(System.in);
 
+        // Process input
         for (int i = 0; i < 6; i++) {
             for (int j = 0; j < 6; j++) {
                 arr[i][j] = in.nextInt();
@@ -89,6 +90,8 @@ public class Java2DArray {
                 }
             }
         }
+
+        // Prints output as requested
         System.out.println(max);
     }
 }

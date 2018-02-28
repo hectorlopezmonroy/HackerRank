@@ -85,6 +85,7 @@ public class JavaDequeue {
         HashSet<Integer> mySet = new HashSet<Integer>();
         Deque<Integer> myDequeue = new ArrayDeque<Integer>();
 
+        // Process input
         for (int i = 0; i < N; i++) {
             int elem = in.nextInt();
 
@@ -95,6 +96,10 @@ public class JavaDequeue {
                     max = mySet.size();
                 }
                 if (max == M) {
+                    // If the number of unique elements in the Deque equals the
+                    // size of the Deque, then it isn't necessary to keep
+                    // scanning the list of integers. Just process the input
+                    // till the end and break from the loop.
                     while (in.hasNext()) {
                         in.nextLine();
                     }
@@ -107,6 +112,8 @@ public class JavaDequeue {
             }
         }
         in.close();
+
+        // Prints output as requested
         System.out.println(max);
     }
 }

@@ -78,11 +78,12 @@ public class JavaSubarray {
     }
 
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
         int res = 0;
+        Scanner in = new Scanner(System.in);
         int n = in.nextInt();
         int[] A = new int[n];
 
+        // Initializes input array
         for (int i = 0; i < n; i++) {
             A[i] = in.nextInt();
         }
@@ -95,6 +96,8 @@ public class JavaSubarray {
                 }
             }
         }
+
+        // Prints output as requested
         System.out.println(res);
     }
 }

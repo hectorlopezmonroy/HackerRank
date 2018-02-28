@@ -120,11 +120,12 @@ public class Java1DArray {
         int q = in.nextInt();
         boolean[] res = new boolean[q];
 
+        // Process input queries
         for (int i = 0; i < q; i++){
             int n = in.nextInt();
             int leap = in.nextInt();
-
             int[] game = new int[n];
+
             for (int j = 0; j < n; j++) {
                 game[j] = in.nextInt();
             }
@@ -132,6 +133,7 @@ public class Java1DArray {
         }
         in.close();
 
+        // Prints output as requested
         for (boolean b : res) {
             System.out.println( b ? "YES" : "NO");
         }

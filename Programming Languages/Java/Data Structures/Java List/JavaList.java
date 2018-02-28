@@ -1,5 +1,6 @@
 /*
  * For this problem, we have 2 types of queries you can perform on a List:
+ *
  *   1. Insert 'y' at index 'x':
  *      Insert
  *      x y
@@ -83,10 +84,10 @@ public class JavaList {
     }
 
     public static void main(String[] args) {
+        int Q = 0;
         Scanner in = new Scanner(System.in);
         int N = in.nextInt();
         LinkedList<Integer> L = new LinkedList<Integer>();
-        int Q = 0;
 
         // Initialize list L
         for (int i = 0; i < N; i++) {
@@ -109,6 +110,7 @@ public class JavaList {
         }
         in.close();
 
+        // Prints output as requested
         printList(L);
     }
 }

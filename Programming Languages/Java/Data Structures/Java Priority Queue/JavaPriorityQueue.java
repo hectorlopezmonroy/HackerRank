@@ -218,6 +218,7 @@ public class JavaPriorityQueue {
         int totalEvents = Integer.parseInt(in.nextLine());
         List<String> events = new ArrayList<>();
 
+        // Processing input events
         while (totalEvents-- != 0) {
             String event = in.nextLine();
             events.add(event);
@@ -225,6 +226,7 @@ public class JavaPriorityQueue {
 
         List<Student> students = priorities.getStudents(events);
 
+        // Prints output as requested
         if (students.isEmpty()) {
             System.out.println("EMPTY");
         } else {

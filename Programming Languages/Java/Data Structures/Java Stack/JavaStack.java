@@ -92,13 +92,13 @@ public class JavaStack {
         Scanner in = new Scanner(System.in);
         LinkedList<Boolean> res = new LinkedList<Boolean>();
 
-        // Checking if each string is balanced
+        // Checks if each input string is balanced
         while (in.hasNext()) {
             res.add(isBalanced(in.nextLine()));
         }
         in.close();
 
-        // Print results
+        // Prints output as requested
         for (boolean b : res) {
             System.out.println(b ? "true" : "false");
         }

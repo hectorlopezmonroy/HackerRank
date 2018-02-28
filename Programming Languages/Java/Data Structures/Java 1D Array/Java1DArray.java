@@ -98,12 +98,14 @@ public class Java1DArray {
         int n = in.nextInt();
         int[] a = new int[n];
 
+        // Process input integers
         for (int i = 0; i < n; i++) {
             int val = in.nextInt();
             a[i] = val;
         }
         in.close();
 
+        // Prints output as requested
         for (int i = 0; i < a.length; i++) {
             System.out.println(a[i]);
         }

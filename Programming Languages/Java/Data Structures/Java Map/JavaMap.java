@@ -59,10 +59,10 @@ public class JavaMap {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        HashMap<String, String> phoneBook = new HashMap<String, String>();
         int n = in.nextInt();
-        LinkedList<String> res = new LinkedList<String>();
         in.nextLine();
+        LinkedList<String> res = new LinkedList<String>();
+        HashMap<String, String> phoneBook = new HashMap<String, String>();
 
         // Populating phonebook
         for (int i = 0; i < n; i++) {

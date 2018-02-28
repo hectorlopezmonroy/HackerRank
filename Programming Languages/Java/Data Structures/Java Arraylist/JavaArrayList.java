@@ -97,6 +97,7 @@ public class JavaArrayList {
         }
         in.close();
 
+        // Prints output as requested
         for (String s : res) {
             System.out.println(s);
         }

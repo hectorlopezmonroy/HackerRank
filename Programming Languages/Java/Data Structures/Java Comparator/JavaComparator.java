@@ -58,6 +58,7 @@ import java.util.Scanner;
 import java.util.Comparator;
 
 class Player {
+
     String name;
     int score;
 
@@ -97,6 +98,7 @@ public class JavaComparator {
 
         // Sorts the array as requested
         Arrays.sort(player, checker);
+
         // Prints the resulting output
         for (int i = 0; i < player.length; i++) {
             System.out.printf("%s %s\n", player[i].name, player[i].score);
