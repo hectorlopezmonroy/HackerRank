@@ -40,6 +40,7 @@ class Rockstar {}
 
 public class JavaInstanceofKeyword {
 
+    @SuppressWarnings({ "unchecked" })
     static String count(ArrayList myList) {
         int a = 0;
         int b = 0;
@@ -65,6 +66,7 @@ public class JavaInstanceofKeyword {
         return ret;
     }
 
+    @SuppressWarnings({ "unchecked" })
     public static void main(String[] args) {
         ArrayList myList = new ArrayList();
         Scanner in = new Scanner(System.in);
