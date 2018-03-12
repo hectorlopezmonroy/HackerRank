@@ -44,7 +44,7 @@ public class MultiplesOf3And5 {
 
     public static long computeSumMultiplesOf(int n, int num) {
         long res = 0;
-        int countMultiplesOfNum = (n -1) / num;
+        int countMultiplesOfNum = (n - 1) / num;
 
         if (countMultiplesOfNum % 2 == 0) {
             // Using right-shift bitwise operation instead of division by two
