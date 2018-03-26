@@ -1,4 +1,5 @@
 /*
+ * Objective
  * Today we're discussing 'scope'. Check out the Tutorial tab for learning
  * materials and an instructional video!
  *
