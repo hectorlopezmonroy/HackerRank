@@ -62,12 +62,13 @@
  *
  * Title: The Alchemist
  * Author: Paulo Coelho
- * Price:248
+ * Price: 248
  */
 
 import java.util.Scanner;
 
 abstract class Book {
+
     String title;
     String author;
 
@@ -80,6 +81,7 @@ abstract class Book {
 }
 
 class MyBook extends Book {
+
     int price;
 
     /*
@@ -107,6 +109,7 @@ class MyBook extends Book {
 }
 
 public class AbstractClasses {
+
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         String title = in.nextLine();

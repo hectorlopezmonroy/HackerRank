@@ -36,8 +36,8 @@
  *
  * Input Format
  *
- * The locked stub code in your editor calls your 'Studen' class constructor and
- * passes it the necessary arguments. It also calls the 'calculate' method
+ * The locked stub code in your editor calls your 'Student' class constructor
+ * and passes it the necessary arguments. It also calls the 'calculate' method
  * (which takes no arguments).
  *
  * You are not responsible for reading the following input from stdin:
@@ -81,6 +81,7 @@
 import java.util.Scanner;
 
 class Person {
+
     protected String firstName;
     protected String lastName;
     protected int idNumber;
@@ -100,6 +101,7 @@ class Person {
 }
 
 class Student extends Person {
+
     private int[] testScores;
 
     /*
@@ -145,6 +147,7 @@ class Student extends Person {
 }
 
 class Inheritance {
+
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         String firstName = in.next();
