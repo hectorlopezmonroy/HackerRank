@@ -16,6 +16,7 @@
  * Constraints
  *
  * 1 <= N <= 1000
+ *
  * 1 <= A_i <= 10000, where A_i is the i-th integer in the array.
  *
  * Output Format
@@ -42,11 +43,15 @@ public class Arrays {
         int n = in.nextInt();
         int[] arr = new int[n];
 
+        // Process input
         for (int i = 0; i < n; i++) {
             arr[i] = in.nextInt();
         }
         in.close();
-        for (int i = arr.length - 1; i >= 0; i--) {
+
+        // Loops through the input array in reverse order and prints its
+        // elements
+        for (int i = arr.length - 1; 0 <= i; i--) {
             System.out.print(arr[i]);
             if (i != 0) {
                 System.out.print(" ");

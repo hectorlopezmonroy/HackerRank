@@ -7,7 +7,7 @@
  * integer data field, 'data', and a 'Node' instance pointer, 'next', pointing
  * to another node (i.e.: the next node in a list).
  *
- * A 'Node insert' function is also declared in your editor. It has two
+ * A Node insert function is also declared in your editor. It has two
  * parameters: a pointer, 'head', pointing to the first node of a linked list,
  * and an integer 'data' value that must be added to the end of the list as a
  * new 'Node' object.
@@ -83,26 +83,34 @@ public class LinkedList {
         Node res = head;
 
         if (head == null) {
+            // Empty Linked List case
             res = new Node(data);
         } else {
+            // Non-empty Linked List case
             Node iter = head;
             Node tmp = new Node(data);
 
+            // Loops through the Linked List until it reaches its last Node
             while (iter.next != null) {
                 iter = iter.next;
             }
+            // Links the Node tmp as the last node of the Linked List
             iter.next = tmp;
         }
+
+        // Returns the reference to the head of the Linked List
         return res;
     }
 
     public static void display(Node head) {
         Node start = head;
 
+        // Loops through the nodes of the Linked List and prints them in order
         while (start != null) {
             System.out.print(start.data + " ");
             start = start.next;
         }
+        System.out.println();
     }
 
     public static void main(String[] args) {
@@ -110,11 +118,13 @@ public class LinkedList {
         Node head = null;
         int N = in.nextInt();
 
+        // Process input
         while (N-- > 0) {
             int elem = in.nextInt();
             head = insert(head, elem);
         }
         in.close();
+
         display(head);
     }
 }

@@ -19,7 +19,8 @@
  * Constraints
  *
  * 1 <= T <= 10
- * 2 <= length of S <= 10000
+ *
+ *  2 <= length of S <= 10000
  *
  * Output Format
  *
@@ -73,10 +74,13 @@ public class LetsReview {
         String odd = "";
         String even = "";
 
+        // Loops through the word's length
         for (int i = 0; i < word.length(); i++) {
             if (i % 2 == 0) {
+                // Even characters
                 even = even + word.charAt(i);
             } else {
+                // Odd characters
                 odd = odd + word.charAt(i);
             }
         }
@@ -89,11 +93,14 @@ public class LetsReview {
         int T = in.nextInt();
         String[] res = new String[T];
 
+        // Process input
         for (int i = 0; i < T; i++) {
             String word = in.next();
             res[i] = splitEvenAndOddChars(word);
         }
         in.close();
+
+        // Prints output
         for (String s : res) {
             System.out.println(s);
         }

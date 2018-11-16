@@ -260,8 +260,11 @@ public class Testing {
         System.out.println(this.t);
         for (int i = 0; i < this.t; i++) {
             if (i % 2 != 0) {
+                // The problem specification requires the second and fourth test
+                // cases to be non canceled classes.
                 tc = generateNonCanceledClass();
             } else {
+                // Canceled class case (first, third and fifth).
                 tc = generateCanceledClass();
             }
             tc.display();

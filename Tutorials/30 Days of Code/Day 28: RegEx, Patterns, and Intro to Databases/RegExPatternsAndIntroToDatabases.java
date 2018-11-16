@@ -60,10 +60,12 @@ import java.util.regex.Pattern;
 public class RegExPatternsAndIntroToDatabases {
 
     public static void main(String[] args) {
+        int N;
         String[] res;
         Scanner in = new Scanner(System.in);
         LinkedList<String> l = new LinkedList<>();
-        int N = in.nextInt();
+
+        N = in.nextInt();
         in.nextLine();
 
         // Process input

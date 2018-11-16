@@ -22,7 +22,7 @@
  *
  * Constraints
  *
- * 2 <=N <= 12
+ * 2 <= N <= 12
  *
  * Your submission must contain a recursive function named 'factorial'.
  *
@@ -54,6 +54,8 @@
 import java.util.Scanner;
 
 public class Recursion {
+
+    // Recursively computes the factorial of the argument 'n'.
     static int factorial(int n) {
         if (n == 1) {
             return 1;
@@ -66,6 +68,7 @@ public class Recursion {
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
         int result = factorial(n);
+
         System.out.println(result);
         in.close();
     }

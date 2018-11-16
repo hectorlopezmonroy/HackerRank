@@ -65,8 +65,8 @@ public class Generics {
         }
         in.close();
 
-        Printer<Integer> intPrinter = new Printer<Integer>();
-        Printer<String> stringPrinter = new Printer<String>();
+        Printer<Integer> intPrinter = new Printer<>();
+        Printer<String> stringPrinter = new Printer<>();
         intPrinter.printArray(intArray);
         stringPrinter.printArray(stringArray);
 

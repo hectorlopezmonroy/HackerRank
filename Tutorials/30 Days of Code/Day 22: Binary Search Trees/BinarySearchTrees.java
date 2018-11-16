@@ -101,7 +101,7 @@ public class BinarySearchTrees {
         int T = in.nextInt();
         Node root = null;
 
-        // Process input
+        // Process input, assembles BST
         while (T-- > 0) {
             int data = in.nextInt();
             root = insert(root, data);

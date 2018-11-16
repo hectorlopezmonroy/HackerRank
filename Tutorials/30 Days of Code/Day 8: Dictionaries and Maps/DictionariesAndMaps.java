@@ -75,21 +75,24 @@
  * Harry is one of the keys in our dictionary, so we print 'harry=12299933'.
  */
 
-import java.util.Scanner;
 import java.util.HashMap;
+import java.util.Scanner;
 
 public class DictionariesAndMaps {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
-        HashMap<String, String> phoneBook = new HashMap<String, String>();
+        HashMap<String, String> phoneBook = new HashMap<>();
 
+        // Process input
         for (int i = 0; i < n; i++) {
             String name = in.next();
             String phoneNumber = in.next();
             phoneBook.put(name, phoneNumber);
         }
+
+        // Process the subsequent queries and prints output
         while (in.hasNext()) {
             String query = in.next();
             if (phoneBook.containsKey(query)) {

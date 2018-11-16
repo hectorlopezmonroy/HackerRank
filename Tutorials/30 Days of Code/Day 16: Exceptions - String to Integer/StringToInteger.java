@@ -65,6 +65,9 @@ public class StringToInteger {
             int N = Integer.parseInt(S);
             System.out.println(N);
         } catch (NumberFormatException e) {
+            // If the string S doesn't contain a parsable integer the try block
+            // above will raise an exception. We handle this exception by
+            // printing "Bad string".
             System.out.println("Bad String");
         } finally {
             in.close();

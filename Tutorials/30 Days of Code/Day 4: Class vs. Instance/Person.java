@@ -146,10 +146,15 @@ import java.util.Scanner;
          for (int i = 0; i < T; i++) {
              int age = sc.nextInt();
              Person p = new Person(age);
+
+             // First check of the person's age.
              p.amIOld();
+
+             // Three years passed..
              for (int j = 0; j < 3; j++) {
                  p.yearPasses();
              }
+             // Second check of the person's age.
              p.amIOld();
              System.out.println();
          }

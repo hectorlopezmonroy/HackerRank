@@ -36,6 +36,7 @@
  * Constraints
  *
  * -9 <= A[i][j] <= 9
+ *
  * 0 <= i, j <= 5
  *
  * Output Format
@@ -90,17 +91,27 @@
         int max = 0;
         int tmp = 0;
 
+        // Loops through the columns of the two-dimensional array
         for (int i = 0; i < 4; i++) {
+
+            // Loops through the rows of the two-dimensional array
             for (int j = 0; j < 4; j++) {
+
                 // Upper edge of the hourglass
                 tmp = arr[i][j] + arr[i][j + 1] + arr[i][j + 2];
+
                 // Center of the hourglass
                 tmp = tmp + arr[i + 1][j + 1];
+
                 // Bottom of the hourglass
                 tmp = tmp + arr[i + 2][j] + arr[i + 2][j + 1] + arr[i + 2][j + 2];
+
                 if (i == 0 && j == 0) {
+                    // Initializes max with the value of the first hourglass
                     max = tmp;
                 } else if (tmp > max) {
+                    // Updates max if there's another hourglass with a greater
+                    // value
                     max = tmp;
                 }
             }
@@ -111,6 +122,8 @@
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int[][] arr = new int[6][6];
+
+        // Process input
         for (int i = 0; i < 6; i++) {
             for (int j = 0; j < 6; j++) {
                 arr[i][j] = in.nextInt();

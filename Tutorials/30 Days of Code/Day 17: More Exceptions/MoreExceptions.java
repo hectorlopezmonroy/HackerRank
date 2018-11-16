@@ -89,6 +89,9 @@ public class MoreExceptions {
                 int ans = myCalculator.power(n, p);
                 System.out.println(ans);
             } catch (Exception e) {
+                // If the 'power' method raises an exception (either n or p is
+                // negative) in the try block above, we handle that by printing
+                // the exception's message.
                 System.out.println(e.getMessage());
             }
         }

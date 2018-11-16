@@ -77,13 +77,18 @@ public class MoreLinkedLists {
         Node p = new Node(data);
 
         if (head == null) {
+            // Empty Linked List
             head = p;
         } else if (head.next == null) {
+            // Linked List with only one Node
             head.next = p;
         } else {
+            // Linked List with more than one Node
             Node start = head;
 
             while (start.next != null) {
+                // Iterates through the Nodes in the Linked List until it finds
+                // the last one.
                 start = start.next;
             }
             start.next = p;
@@ -95,7 +100,12 @@ public class MoreLinkedLists {
         Node start = head;
 
         while (start != null && start.next != null) {
+            // While there are at least two nodes in the Linked List...
             if (start.data == start.next.data) {
+                // Current Node and the next one are duplicates, therefore we
+                // link current Node with the following one after next.
+                // This solution works because of the constraint in the problem
+                // statement.
                 start.next = start.next.next;
             } else {
                 start = start.next;
@@ -111,6 +121,7 @@ public class MoreLinkedLists {
             System.out.print(start.data + " ");
             start = start.next;
         }
+        System.out.println();
     }
 
     public static void main(String[] args) {

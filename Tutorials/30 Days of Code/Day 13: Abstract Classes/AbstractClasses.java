@@ -17,7 +17,7 @@
  *     2. String 'author'.
  *     3. int 'price'.
  *
- *   * Implements the 'Book' class abstract 'display()' method so it prints
+ *   * Implements the 'Book' class' abstract 'display()' method so it prints
  *     these 3 lines:
  *     1. "Title:", a space, and then the current instance's 'title'.
  *     2. "Author:", a space, and then the current instance's 'author'.

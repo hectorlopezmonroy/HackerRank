@@ -69,7 +69,7 @@
  *
  * Name: Memelli, Heraldo
  * ID: 8135627
- * Grade: 0
+ * Grade: O
  *
  * Explanation
  *
@@ -119,16 +119,19 @@ class Student extends Person {
 
     /*
      * Method Name: calculate
-     * @return A character denoting the grade.
+     * @return A character denoting the Student's grade.
      */
     public char calculate() {
         int avg = 0;
         char res = ' ';
 
+        // Loops through the student's test scores and computes his/her average
         for (int i = 0; i < this.testScores.length; i++) {
             avg = avg + this.testScores[i];
         }
         avg = (int) (avg / testScores.length);
+
+        // Assigns a grade corresponding to the student's test scores average
         if (90 <= avg && avg <= 100) {
             res = 'O';
         } else if (80 <= avg && avg < 90) {
@@ -156,6 +159,7 @@ class Inheritance {
         int numScores = in.nextInt();
         int[] testScores = new int[numScores];
 
+        // Process test scores' input
         for (int i = 0; i < numScores; i++) {
             testScores[i] = in.nextInt();
         }

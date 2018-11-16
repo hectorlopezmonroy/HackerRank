@@ -78,11 +78,21 @@ public class BitwiseAND {
         int max = 0;
 
         for (int i = 1; i < N && (max < K - 1); i++) {
+            // We iterate through the set of positive integers [1, 2, ... , N)
+            // until all possible combinations have been tried OR until we find
+            // the A&B such that A&B = K - 1 (maximum possible allowed).
             for (int j = i + 1; j <= N; j++) {
-                int tmp = i & j;
+                // This nested loop iterates through the set of positive
+                // integers [i + 1, N]
+                int tmp = i & j;        // tmp stores this A&B value
+
                 if (max < tmp && tmp < K) {
+                    // This A&B (tmp) is greater than the previously maximum A&B
+                    // found, so, we update max accordingly.
                     max = tmp;
                     if (max == K - 1) {
+                        // In case we find the maximum A&B allowed, there's no
+                        // need to keep looking for a one with greater value.
                         break;
                     }
                 }

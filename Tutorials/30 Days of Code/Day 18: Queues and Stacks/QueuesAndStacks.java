@@ -64,8 +64,8 @@ import java.util.LinkedList;
 
 class Solution {
 
-    public static Stack<Character> myStack = new Stack<Character>();
-    public static Queue<Character> myQueue = new LinkedList<Character>();
+    public static Stack<Character> myStack = new Stack<>();
+    public static Queue<Character> myQueue = new LinkedList<>();
 
     public void pushCharacter(char c) {
         this.myStack.push(c);
@@ -115,6 +115,6 @@ public class QueuesAndStacks {
 
         // Finally, print whether string s is palindrome or not.
         System.out.println("The word, " + input + ", is " +
-                          ( (!isPalindrome) ? "not a palindrome." : "a palindrome." ));
+                          ((!isPalindrome) ? "not a palindrome." : "a palindrome."));
     }
 }
