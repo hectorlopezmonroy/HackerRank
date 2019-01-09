@@ -58,8 +58,10 @@ public class Recursion {
     // Recursively computes the factorial of the argument 'n'.
     static int factorial(int n) {
         if (n == 1) {
+            // Base case
             return 1;
         } else {
+            // Recursive case
             return n * factorial(n - 1);
         }
     }

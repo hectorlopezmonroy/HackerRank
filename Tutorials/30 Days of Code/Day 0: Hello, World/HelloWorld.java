@@ -12,19 +12,19 @@
  *
  * You've got this!
  *
- * Note: The instructions are Java-based, but we support submisisons in many
+ * Note: The instructions are Java-based, but we support submissions in many
  * popular languages. You can switch languages using the drop-down menu above
- * your editor, and the inputString variable may be written differently
+ * your editor, and the 'inputString' variable may be written differently
  * depending on the best-practice of your submission language.
  *
  * Input Format
  *
- * A single line of text denoting inputString (the variable whose contents must
- * be printed).
+ * A single line of text denoting 'inputString' (the variable whose contents
+ * must be printed).
  *
  * Output Format
  *
- * Print "Hello, World." on the first line, and the contents of inputString on
+ * Print "Hello, World." on the first line, and the contents of 'inputString' on
  * the second line.
  *
  * Sample Input
@@ -39,7 +39,7 @@
  * Explanation
  *
  * On the first line, we print the string literal "Hello, World.". On the second
- * line, we print the contents of the inputString variable, which, for this
+ * line, we print the contents of the 'inputString' variable, which, for this
  * sample case, happens to be "Welcome to 30 Days of Code!". If you do not print
  * the variable's contents to stdout, you will not pass the hidden test case.
  */
@@ -50,21 +50,21 @@ public class HelloWorld {
 
     public static void main(String[] args) {
         // Create a Scanner object to read input from stdin.
-        Scanner scan = new Scanner(System.in);
+        Scanner in = new Scanner(System.in);
 
         // Read a full line of input from stdin and save it to our variable,
-        // inputString.
-        String inputString = scan.nextLine();
+        // 'inputString'.
+        String inputString = in.nextLine();
 
         // Close the scanner object, because we've finished reading all of the
         // input from stdin needed for this challenge.
-        scan.close();
+        in.close();
 
         // Print a string literal saying "Hello, World." to stdout.
         System.out.println("Hello, World.");
 
-        // Write a line of code here that prints the contents of inputString to
-        // stdout.
+        // Write a line of code here that prints the contents of 'inputString'
+        // to stdout.
         System.out.println(inputString);
     }
 }

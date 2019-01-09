@@ -1,6 +1,6 @@
 /*
  * Objective
- * Today we're discussing 'scope'. Check out the Tutorial tab for learning
+ * Today we're discussing scope. Check out the Tutorial tab for learning
  * materials and an instructional video!
  *
  * The 'absolute difference' between two integers, 'a' and 'b', is written as
@@ -77,19 +77,15 @@ class Difference {
 
     Difference(int[] a) {
         this.maximumDifference = -1;
-        this.elements = new int[a.length];
-
-        for (int i = 0; i < a.length; i++) {
-            elements[i] = a[i];
-        }
+        this.elements = a;
     }
 
     public void computeDifference() {
 
-        // Loops through the elements array and computes the absolute difference
-        // between each two elements. Later, it compares this difference to the
-        // current maximum absolute difference and updates its value
-        // accordingly.
+        /* Loops through the elements array and computes the absolute difference
+         * between each two elements. Later, it compares this difference to the
+         * current maximum absolute difference and updates its value
+         * accordingly. */
         for (int i = 0; i < elements.length - 1; i++) {
             for (int j = i + 1; j < elements.length; j++) {
                 int tmp = Math.abs(elements[i] - elements[j]);

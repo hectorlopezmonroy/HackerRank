@@ -4,7 +4,7 @@
  * Check out the Tutorial tab for learning materials and an instructional video!
  *
  * Context
- * Given a 6 x 6 2D Array, A:
+ * Given a 6 x 6 2D Array, 'A':
  *
  * 1 1 1 0 0 0
  * 0 1 0 0 0 0
@@ -13,24 +13,24 @@
  * 0 0 0 0 0 0
  * 0 0 0 0 0 0
  *
- * We define an hourglass in A to be a subset of values with indices falling in
- * this pattern in A's graphical representation:
+ * We define an hourglass in 'A' to be a subset of values with indices falling
+ * in this pattern in A's graphical representation:
  *
  * a b c
  *   d
  * e f g
  *
- * There are 16 hourglasses in A, and an hourglass sum is the sum of an
+ * There are 16 hourglasses in 'A', and an hourglass sum is the sum of an
  * hourglass' values.
  *
  * Task
- * Calculate the hourglass sum for every hourglass in A, then print the maximum
- * hourglass sum.
+ * Calculate the hourglass sum for every hourglass in 'A', then print the
+ * maximum hourglass sum.
  *
  * Input Format
  *
  * There are 6 lines of input, where each line contains 6 space-separated
- * integers describing 2D Array A; every value in A will be in the inclusive
+ * integers describing 2D Array 'A'; every value in 'A' will be in the inclusive
  * range of -9 to 9.
  *
  * Constraints
@@ -41,7 +41,7 @@
  *
  * Output Format
  *
- * Print the largest (maximum) hourglass sum found in A.
+ * Print the largest (maximum) hourglass sum found in 'A'.
  *
  * Sample Input
  *
@@ -58,7 +58,7 @@
  *
  * Explanation
  *
- * A contains the following hourglasses:
+ * 'A' contains the following hourglasses:
  *
  * 1 1 1  1 1 0  1 0 0  0 0 0
  *   1      0      0      0
@@ -101,16 +101,16 @@
                 tmp = arr[i][j] + arr[i][j + 1] + arr[i][j + 2];
 
                 // Center of the hourglass
-                tmp = tmp + arr[i + 1][j + 1];
+                tmp += arr[i + 1][j + 1];
 
                 // Bottom of the hourglass
-                tmp = tmp + arr[i + 2][j] + arr[i + 2][j + 1] + arr[i + 2][j + 2];
+                tmp += arr[i + 2][j] + arr[i + 2][j + 1] + arr[i + 2][j + 2];
 
                 if (i == 0 && j == 0) {
-                    // Initializes max with the value of the first hourglass
+                    // Initializes 'max' with the value of the first hourglass
                     max = tmp;
                 } else if (tmp > max) {
-                    // Updates max if there's another hourglass with a greater
+                    // Updates 'max' if there's another hourglass with a greater
                     // value
                     max = tmp;
                 }

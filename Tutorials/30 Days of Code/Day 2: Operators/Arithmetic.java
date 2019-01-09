@@ -14,17 +14,17 @@
  * Input Format
  *
  * There are 3 lines of numeric input:
- * The first line has a double, mealCost (the cost of the meal before tax and
+ * The first line has a double, 'mealCost' (the cost of the meal before tax and
  * tip).
- * The second line has an integer, tipPercent (the percentage of mealCost being
- * added as tip).
- * The third line has an integer, taxPercent (the percentage of mealCost being
- * added as tax).
+ * The second line has an integer, 'tipPercent' (the percentage of 'mealCost'
+ * being added as tip).
+ * The third line has an integer, 'taxPercent' (the percentage of 'mealCost'
+ * being added as tax).
  *
  * Output Format
  *
- * Print "The total meal cost is totalCost dollars.", where totalCost is the
- * rounded integer result of the entire bill (mealCost added tax and tip).
+ * Print "The total meal cost is totalCost dollars.", where 'totalCost' is the
+ * rounded integer result of the entire bill ('mealCost' added tax and tip).
  *
  * Sample Input
  *
@@ -47,7 +47,8 @@
  * totalCost = mealCost + tip + tax = 12 + 2.4 + 0.96 = 15.36
  * round(totalCost) = 15
  *
- * We round totalCost to the nearest dollar (integer) and then print our result:
+ * We round 'totalCost' to the nearest dollar (integer) and then print our
+ * result:
  *
  *   The total meal cost is 15 dollars.
  */
@@ -58,14 +59,14 @@ import java.util.Scanner;
 public class Arithmetic {
 
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        double mealCost = scan.nextDouble();	// original meal price
-        int tipPercent = scan.nextInt();		// tip percentage
-        int taxPercent = scan.nextInt();		// tax percentage
+        Scanner in = new Scanner(System.in);
+        double mealCost = in.nextDouble();  // original meal price
+        int tipPercent = in.nextInt();      // tip percentage
+        int taxPercent = in.nextInt();      // tax percentage
         int totalCost = 0;
         double tax = 0.0;
         double tip = 0.0;
-        scan.close();
+        in.close();
 
         // Write your calculation code here.
         tax = mealCost * (taxPercent / 100.00);

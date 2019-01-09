@@ -4,13 +4,13 @@
  * tab for learning materials and an instructional video!
  *
  * Task
- * Given an array, A, of N integers, print A's elements in reverse order as a
- * single line of space-separated numbers.
+ * Given an array, 'A', of 'N' integers, print A's elements in reverse order as
+ * a single line of space-separated numbers.
  *
  * Input Format
  *
- * The first line contains an integer, N (the size of our array).
- * The second line contains N space-separated integers describing array A's
+ * The first line contains an integer, 'N' (the size of our array).
+ * The second line contains 'N' space-separated integers describing array A's
  * elements.
  *
  * Constraints
@@ -21,7 +21,7 @@
  *
  * Output Format
  *
- * Print the elements of array A in reverse order as a single line of
+ * Print the elements of array 'A' in reverse order as a single line of
  * space-separated numbers.
  *
  * Sample Input

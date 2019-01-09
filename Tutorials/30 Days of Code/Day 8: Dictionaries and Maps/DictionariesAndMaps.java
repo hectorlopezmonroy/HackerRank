@@ -9,7 +9,7 @@
  * names to their respective phone numbers. You will then be given an unknown
  * number of names to query your phone book for. For each 'name' queried, print
  * the associated entry from your phone book on a new line in the form
- * 'name=phoneNumber'; if an entry for 'name' is not found, print 'Not found'
+ * 'name=phoneNumber'; if an entry for 'name' is not found, print "Not found"
  * instead.
  *
  * Note: Your phone book should be a Dictionary/Map/HashMap data structure.
@@ -36,7 +36,7 @@
  *
  * Output Format
  *
- * On a new line for each query, print 'Not found' if the name has no
+ * On a new line for each query, print "Not found" if the name has no
  * corresponding entry in the phone book; otherwise, print the full 'name' and
  * 'phoneNumber' in the format 'name=phoneNumber'.
  *
@@ -63,13 +63,13 @@
  * phoneBook = {(sam, 99912222), (tom, 11122222), (harry, 12299933)}
  *
  * We then process each query and print 'key=value' if the queried 'key' is
- * found in the map; otherwise, we print 'Not found'.
+ * found in the map; otherwise, we print "Not found".
  *
  * Query 0: sam
  * Sam is one of the keys in our dictionary, so we print 'sam=99912222'.
  *
  * Query 1: edward
- * Edward is not one of the keys in our dictionary, so we print 'Not found'.
+ * Edward is not one of the keys in our dictionary, so we print "Not found".
  *
  * Query 2: harry
  * Harry is one of the keys in our dictionary, so we print 'harry=12299933'.

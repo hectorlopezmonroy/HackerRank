@@ -5,7 +5,7 @@
  * materials and an instructional video!
  *
  * Task
- * Given a string, S, of length N that is indexed from 0 to N - 1, print its
+ * Given a string, 'S', of length 'N' that is indexed from 0 to N - 1, print its
  * even-indexed and odd-indexed characters as 2 space-separated strings on a
  * single line (see the Sample below for more detail).
  *
@@ -13,8 +13,8 @@
  *
  * Input Format
  *
- * The first line contains an integer, T (the number of test cases).
- * Each line i of the T subsequent lines contain a String, S.
+ * The first line contains an integer, 'T' (the number of test cases).
+ * Each line 'i' of the 'T' subsequent lines contain a String, 'S'.
  *
  * Constraints
  *
@@ -53,7 +53,7 @@
  * contains the ordered characters from S' even indices (Hce), and the second
  * string contains the ordered characters from S' odd indices (akr).
  *
- * Test Case 1/; S = "Rank"
+ * Test Case 1: S = "Rank"
  * S[0] = 'R'
  * S[1] = 'a'
  * S[2] = 'n'

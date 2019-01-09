@@ -1,6 +1,6 @@
 /*
  * Objective
- * Today, we're getting started with 'Exceptions' by learning how to parse an
+ * Today, we're getting started with Exceptions by learning how to parse an
  * integer from a string and print a custom error message. Check out the
  * Tutorial tab for learning materials and an instructional video!
  *
@@ -48,6 +48,7 @@
  *
  * Sample Case 0 contains an integer, so it should not raise an exception when
  * we attempt to convert it to an integer. Thus, we print the 3.
+ *
  * Sample Case 1 does not contain any integers, so an attempt to convert it to
  * an integer will raise an exception. Thus, our exception handler prints "Bad
  * String".
@@ -65,9 +66,9 @@ public class StringToInteger {
             int N = Integer.parseInt(S);
             System.out.println(N);
         } catch (NumberFormatException e) {
-            // If the string S doesn't contain a parsable integer the try block
-            // above will raise an exception. We handle this exception by
-            // printing "Bad string".
+            /* If the string 'S' doesn't contain a parsable integer the try
+             * block above will raise an exception. We handle this exception by
+             * printing "Bad string". */
             System.out.println("Bad String");
         } finally {
             in.close();

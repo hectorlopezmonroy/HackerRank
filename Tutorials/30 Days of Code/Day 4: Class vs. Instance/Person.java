@@ -140,11 +140,11 @@ import java.util.Scanner;
      }
 
      public static void main(String[] args) {
-         Scanner sc = new Scanner(System.in);
-         int T = sc.nextInt();
+         Scanner in = new Scanner(System.in);
+         int T = in.nextInt();
 
          for (int i = 0; i < T; i++) {
-             int age = sc.nextInt();
+             int age = in.nextInt();
              Person p = new Person(age);
 
              // First check of the person's age.
@@ -154,10 +154,11 @@ import java.util.Scanner;
              for (int j = 0; j < 3; j++) {
                  p.yearPasses();
              }
+
              // Second check of the person's age.
              p.amIOld();
              System.out.println();
          }
-         sc.close();
+         in.close();
      }
  }

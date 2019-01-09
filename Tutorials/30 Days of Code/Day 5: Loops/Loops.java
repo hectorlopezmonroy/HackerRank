@@ -4,12 +4,13 @@
  * Check out the Tutorial tab to learn more.
  *
  * Task
- * Given an integer, n, print its first 10 multiples. Each multiple n * i (where
- * 1 <= i <= 10) should be printed on a new line in the form: n * i = result.
+ * Given an integer, 'n', print its first 10 multiples. Each multiple n * i
+ * (where 1 <= i <= 10) should be printed on a new line in the form:
+ * n * i = result.
  *
  * Input Format
  *
- * A single integer, n.
+ * A single integer, 'n'.
  *
  * Constraints
  *
