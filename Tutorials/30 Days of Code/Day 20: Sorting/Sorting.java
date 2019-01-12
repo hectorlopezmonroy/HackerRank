@@ -127,7 +127,7 @@ public class Sorting {
                 }
             }
 
-            totalSwaps = totalSwaps + numberOfSwaps;
+            totalSwaps += numberOfSwaps;
             // If no elements were swapped during a traversal, array is sorted
             if (numberOfSwaps == 0) {
                 break;

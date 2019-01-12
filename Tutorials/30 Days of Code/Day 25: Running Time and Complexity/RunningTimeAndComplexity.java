@@ -65,13 +65,15 @@ public class RunningTimeAndComplexity {
         if (n == 2) {
             ;
         } else if ((n <= 1) || (2 < n && n % 2 == 0)) {
-            // If n is a negative integer, zero, one, or an even integer greater
-            // than two, then it isn't prime.
+            /* If n is a negative integer, zero, one, or an even integer greater
+             * than two, then it isn't prime.
+             */
             isPrime = false;
         } else {
             for (int i = 3; i < Math.sqrt(n); i += 2) {
-                // We only need to check the possible odd divisors of n up to
-                // square root of n (n^(1/2)).
+                /* We only need to check the possible odd divisors of n up to
+                 * square root of n (n^(1/2)).
+                 */
                 if (n % i == 0) {
                     isPrime = false;
                     break;

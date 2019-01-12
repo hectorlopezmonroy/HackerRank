@@ -79,8 +79,9 @@ public class BSTLevelOrderTraversal {
             // Empty tree
             return new Node(data);
         } else {
-            // Non-empty tree. We have to make sure to insert appropriately
-            // in order to keep the Binary-Search Tree property.
+            /* Non-empty tree. We have to make sure to insert appropriately
+             * in order to keep the Binary-Search Tree property.
+             */
             Node cur;
             if (data <= root.data) {
                 cur = insert(root.left, data);
@@ -103,20 +104,23 @@ public class BSTLevelOrderTraversal {
             while (!q.isEmpty()) {
                 Node cur = q.remove();
                 if (res.equals("")) {
-                    // The string representation of the tree's level-order
-                    // traversal is empty; first node added to the traversal is
-                    // the root of the BST.
+                    /* The string representation of the tree's level-order
+                     * traversal is empty; first node added to the traversal is
+                     * the root of the BST.
+                     */
                     res = Integer.toString(cur.data);
                 } else {
-                    // We keep the previously visited nodes' data and append the
-                    // current node's data to the tree's level-order
-                    // representation.
-                    res = res + " " + cur.data;
+                    /* We keep the previously visited nodes' data and append the
+                     * current node's data to the tree's level-order
+                     * representation.
+                     */
+                    res += " " + cur.data;
                 }
 
-                // Now we add nodes from the next level into the queue, making
-                // sure to add the left node first and the right one later.
-                // This ensures we keep the bread-first search order.
+                /* Now we add nodes from the next level into the queue, making
+                 * sure to add the left node first and the right one later.
+                 * This ensures we keep the bread-first search order.
+                 */
                 if (cur.left != null) {
                     q.add(cur.left);
                 }

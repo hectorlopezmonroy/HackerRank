@@ -110,8 +110,9 @@
                     // Initializes 'max' with the value of the first hourglass
                     max = tmp;
                 } else if (tmp > max) {
-                    // Updates 'max' if there's another hourglass with a greater
-                    // value
+                    /* Updates 'max' if there's another hourglass with a greater
+                     * value.
+                     */
                     max = tmp;
                 }
             }

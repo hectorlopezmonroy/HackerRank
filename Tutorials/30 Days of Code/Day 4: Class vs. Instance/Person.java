@@ -14,9 +14,9 @@
  * valid, setting age to 0.". In addition, you must write the following instance
  * methods:
  *
- * 1. yearPasses() should increment the 'age' instance variable by 1.
+ * 1. 'yearPasses()' should increment the 'age' instance variable by 1.
  *
- * 2. amIOld() should perform the following conditional actions:
+ * 2. 'amIOld()' should perform the following conditional actions:
  *
  *   * If 'age' < 13, print "You are young.".
  *
@@ -77,21 +77,21 @@
  * Explanation
  *
  * Test Case 0: initialAge = -1
- * Because initialAge < 0, our code must set 'age' to 0 and print the "Age is
+ * Because 'initialAge' < 0, our code must set 'age' to 0 and print the "Age is
  * not valid..." message followed by the young message. Three years pass and
  * age = 3, so we print the young message again.
  *
  * Test Case 1: initialAge = 10
- * Because initialAge < 13, our code should print that the person is young.
+ * Because 'initialAge' < 13, our code should print that the person is young.
  * Three years pass and age = 13, so we print that the person is now a teenager.
  *
  * Test Case 2: initialAge = 16
- * Because 13 <= initialAge <= 18, our code should print that the person is a
+ * Because 13 <= 'initialAge' <= 18, our code should print that the person is a
  * teenager. Three years pass and age = 19, so we print the person is old.
  *
  * Test Case 3: initialAge = 18
- * Because initialAge >= 18, our code should print that the person is old. Three
- * years pass and the person is still old at age = 21, so we print the old
+ * Because 'initialAge' >= 18, our code should print that the person is old.
+ * Three years pass and the person is still old at age = 21, so we print the old
  * message again.
  *
  * The extra line at the end of the output is supposed to be there and is
@@ -122,8 +122,9 @@ import java.util.Scanner;
      public void amIOld() {
          String msg;
 
-         // Write code determining if this person's age is old and print the
-         // correct statement:
+         /* Write code determining if this person's age is old and print the
+          * correct statement.
+          */
          if (this.age < 13) {
              msg = "You are young.";
          } else if (13 <= this.age && this.age < 18) {

@@ -20,7 +20,7 @@
  *   1. Two instance variables: one for your 'stack', and one for your 'queue'.
  *
  *   2. A 'void pushCharacter(char ch)' method that pushes a character onto a
- *      stack.
+ *      'stack'.
  *
  *   3. A 'void enqueueCharacter(char ch)' method that enqueues a character in
  *      the 'queue' instance variable.
@@ -103,8 +103,9 @@ public class QueuesAndStacks {
             p.enqueueCharacter(c);
         }
 
-        // Pop/Dequeue the chars at the head of both data structures and compare
-        // them:
+        /* Pop/Dequeue the chars at the head of both data structures and compare
+         * them:
+         */
         boolean isPalindrome = true;
         for (int i = 0; i < s.length / 2; i++) {
             if (p.popCharacter() != p.dequeueCharacter()) {

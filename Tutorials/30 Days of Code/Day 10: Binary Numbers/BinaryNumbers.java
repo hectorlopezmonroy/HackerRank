@@ -55,8 +55,9 @@ public class BinaryNumbers {
     public static String decimalToBinaryRep(int n) {
         String res = "";
 
-        // Using the "Divide by 2" algorithm to convert a decimal integer into
-        // its binary representation.
+        /* Using the "Divide by 2" algorithm to convert a decimal integer into
+         * its binary representation.
+         */
         while (n > 0) {
             res = ((char) n % 2) + res;
             n = n / 2;
@@ -68,8 +69,9 @@ public class BinaryNumbers {
         int max = 0;
         int temp = 0;
 
-        // Loops through the length of the binary representation to find its
-        // maximum number of consecutive ones.
+        /* Loops through the length of the binary representation to find its
+         * maximum number of consecutive ones.
+         */
         for (int i = 0; i < s.length(); i++) {
             if (s.charAt(i) == '1') {
                 temp++;

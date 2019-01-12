@@ -44,8 +44,8 @@
  *
  * The integer 6 is evenly divisible by 1, 2, 3, and 6. Our 'divisorSum' method
  * should return the sum of these numbers, which is 1 + 2 + 3 + 6 = 12. The
- * Interfaces class then prints "I implemented: AdvancedArithmetic" on the first
- * line, followed by the sum returned by 'divisorSum' (which is 12) on the
+ * 'Interfaces' class then prints "I implemented: AdvancedArithmetic" on the
+ * first line, followed by the sum returned by 'divisorSum' (which is 12) on the
  * second line.
  */
 

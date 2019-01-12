@@ -133,13 +133,13 @@ import java.util.HashSet;
 
 class TestCase {
 
-    public int n;                   // Number of students
-    public int k;                   // Minimum attendance required by Professor
-    public int[] A;                 // Students' arrival times
-    public int indexOfZero;
-    public int indexOfPosInteger;
-    public int indexOfNegInteger;
-    public boolean isClassCanceled;
+    private int n;                   // Number of students
+    private int k;                   // Minimum attendance required by Professor
+    private int[] A;                 // Students' arrival times
+    private int indexOfZero;
+    private int indexOfPosInteger;
+    private int indexOfNegInteger;
+    private boolean isClassCanceled;
 
     TestCase(Testing t, boolean b) {
         this.n = t.pickRandomN();
@@ -157,8 +157,9 @@ class TestCase {
     private int generateRandomIndexPosInteger(Random rand) {
         int res = this.indexOfZero;
 
-        // Generating a random index for the positive integer that MUST be
-        // in array A.
+        /* Generating a random index for the positive integer that MUST be
+         * in array A.
+         */
         while (res == this.indexOfZero) {
             res = rand.nextInt(this.n);
         }
@@ -168,8 +169,10 @@ class TestCase {
     private int generateRandomIndexNegInteger(Random rand) {
         int res = this.indexOfZero;
 
-        // Generating a random index for the negative integer that MUST be
-        // in array A.
+        /* Generating a random index for the negative integer that MUST be
+         * in array A, making sure this index is different from the one for the
+         * positive integer that MUST be in array A.
+         */
         while (res == this.indexOfZero ||
                res == this.indexOfPosInteger) {
             res = rand.nextInt(this.n);
@@ -223,7 +226,7 @@ class TestCase {
 
 public class Testing {
 
-    int t;
+    public int t;
     public Random rand;
     public Set<Integer> nValues;
 
@@ -233,35 +236,45 @@ public class Testing {
         this.nValues = new HashSet<>();
     }
 
+    /**
+     * Returns a pseudo-random integer in the inclusive range between [3, 200].
+     * This method makes sure is distinct from those integers in the set
+     * nValues.
+     *
+     * @return  the pseudo-random distinct integer
+     */
     public int pickRandomN() {
-        int n = this.rand.nextInt((200 - 3) + 1) + 3;
+        int n = this.rand.nextInt(198) + 3;
 
         // Making sure all our test cases have a different value of n.
         while (this.nValues.contains(n)) {
-            n = this.rand.nextInt((200 - 3) + 1) + 3;
+            n = this.rand.nextInt(198) + 3;
         }
         this.nValues.add(n);
         return n;
     }
 
     public TestCase generateCanceledClass() {
-        // Since the class is canceled, the boolean parameter is true.
+        // Since the class is canceled, the boolean parameter is set to true.
         return new TestCase(this, true);
     }
 
     public TestCase generateNonCanceledClass() {
-        // Since the class isn't canceled, the boolean parameter is false.
+        /* Since the class isn't canceled, the boolean parameter is set to
+         * false.
+         */
         return new TestCase(this, false);
     }
 
-    public void generateTestCase() {
+    public void generateTestCases() {
         TestCase tc;
 
         System.out.println(this.t);
         for (int i = 0; i < this.t; i++) {
             if (i % 2 != 0) {
-                // The problem specification requires the second and fourth test
-                // cases to be non canceled classes.
+                /* The problem specification requires the second and fourth test
+                 * cases to be non canceled classes.
+                 */
                 tc = generateNonCanceledClass();
             } else {
                 // Canceled class case (first, third and fifth).
@@ -275,6 +288,6 @@ public class Testing {
         int t = 5;
         Testing solution = new Testing(t);
 
-        solution.generateTestCase();
+        solution.generateTestCases();
     }
 }

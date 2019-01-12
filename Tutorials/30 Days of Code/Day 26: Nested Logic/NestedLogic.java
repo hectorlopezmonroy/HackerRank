@@ -67,8 +67,8 @@
  * Because D_e < D_a, we know that it was returned late (but still within the
  * same month and year).
  * Per the library's fee structure, we know that our fine will be
- * 15 Hackos * (# days late). We then print the result of 15 * (D_a - D_e) =
- * 15 * (9 - 6) = 45 as our output.
+ * 15 Hackos * (# days late). We then print the result of
+ * 15 * (D_a - D_e) = 15 * (9 - 6) = 45 as our output.
  */
 
 import java.util.Scanner;

@@ -87,8 +87,9 @@ public class MoreLinkedLists {
             Node start = head;
 
             while (start.next != null) {
-                // Iterates through the Nodes in the Linked List until it finds
-                // the last one.
+                /* Iterates through the Nodes in the Linked List until it finds
+                 * the last one.
+                 */
                 start = start.next;
             }
             start.next = p;
@@ -102,10 +103,11 @@ public class MoreLinkedLists {
         while (start != null && start.next != null) {
             // While there are at least two nodes in the Linked List...
             if (start.data == start.next.data) {
-                // Current Node and the next one are duplicates, therefore we
-                // link current Node with the following one after next.
-                // This solution works because of the constraint in the problem
-                // statement.
+                /* Current Node and the next one are duplicates, therefore we
+                 * link current Node with the following one after next.
+                 * This solution works because of the constraint in the problem
+                 * statement (the list is always in non-decreasing order).
+                 */
                 start.next = start.next.next;
             } else {
                 start = start.next;
