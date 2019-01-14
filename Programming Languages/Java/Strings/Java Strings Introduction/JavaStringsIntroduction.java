@@ -70,12 +70,17 @@ public class JavaStringsIntroduction {
         String B = in.next();
         in.close();
 
+        // First line of output
         System.out.println(A.length() + B.length());
+
+        // Second line of output
         if (A.compareTo(B) > 0) {
             System.out.println("Yes");
         } else {
             System.out.println("No");
         }
+
+        // Third line of output
         System.out.println(A.substring(0,1).toUpperCase() + A.substring(1) + " "
                            + B.substring(0,1).toUpperCase() + B.substring(1));
     }

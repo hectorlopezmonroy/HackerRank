@@ -27,12 +27,18 @@ public class JavaStringReverse {
         boolean res = true;
         in.close();
 
+        /* Loops through half the input string, checking both the i-th and the
+         * i-th from last characters. If any pair of characters is different,
+         * then the input string 'A' isn't a palindrome.
+         */
         for (int i = 0; i < (A.length() / 2); i++) {
             if (A.charAt(i) != A.charAt(A.length() - i - 1)) {
                 res = false;
                 break;
             }
         }
+
+        // Prints output
         if (res) {
             System.out.println("Yes");
         } else {

@@ -4,7 +4,7 @@
  * consecutive English alphabetic letters. Then, print the number of tokens,
  * followed by each token on a new line.
  *
- * Note: You may find the String.split method helpful in completing this
+ * Note: You may find the 'String.split()' method helpful in completing this
  * challenge.
  *
  * Input Format
@@ -62,10 +62,11 @@ public class JavaStringTokens {
         in.close();
 
         if (s.length() == 0) {
-            System.out.println("0");
+            System.out.println(s.length());
         } else {
+            // Prints output
             System.out.println(tokens.length);
-            for (String i: tokens) {
+            for (String i : tokens) {
                 System.out.println(i);
             }
         }

@@ -50,6 +50,7 @@ public class JavaOutputFormatting {
         Scanner in = new Scanner(System.in);
         String[] stringArr = new String[3];
 
+        // Process input
         for (int i = 0; i < 3; i++) {
             stringArr[i] = in.next();
             for (int j = stringArr[i].length(); j < 15; j++) {
@@ -66,6 +67,7 @@ public class JavaOutputFormatting {
         }
         in.close();
 
+        // Prints output
         System.out.println("================================");
         for (String s: stringArr) {
             System.out.println(s);

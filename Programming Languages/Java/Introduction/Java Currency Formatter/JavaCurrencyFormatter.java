@@ -1,6 +1,6 @@
 /*
  * Given a double-precision number, 'payment', denoting an amount of money, use
- * the NumberFormat class' 'getCurrencyInstance' method to convert 'payment'
+ * the 'NumberFormat' class' 'getCurrencyInstance' method to convert 'payment'
  * into the US, Indian, Chinese, and French currency formats. Then print the
  * formatted values as follows:
  *
@@ -12,8 +12,8 @@
  * where 'formattedPayment' is 'payment' formatted according to the appropriate
  * Locale's currency.
  *
- * Note: India does not have a built-in Locale, so you must construct one where
- * the language is 'en' (i.e., English).
+ * Note: India does not have a built-in 'Locale', so you must construct one
+ * where the language is 'en' (i.e., English).
  *
  * Input Format
  *
@@ -31,7 +31,7 @@
  * Indian currency.
  * On the third line, print "China: c" where 'c' is 'payment' formatted for
  * Chinese currency.
- * On the fourth line, print "France: f" where 'f' is 'payment'formatted for
+ * On the fourth line, print "France: f" where 'f' is 'payment' formatted for
  * French currency.
  *
  * Sample Input
@@ -62,7 +62,9 @@ public class JavaCurrencyFormatter {
         double payment = in.nextDouble();
         in.close();
 
+        // Construct a 'Locale' for India where language is 'en'.
         Locale indiaLocale = new Locale("en", "IN");
+
         NumberFormat us = NumberFormat.getCurrencyInstance(Locale.US);
         NumberFormat india = NumberFormat.getCurrencyInstance(indiaLocale);
         NumberFormat china = NumberFormat.getCurrencyInstance(Locale.CHINA);

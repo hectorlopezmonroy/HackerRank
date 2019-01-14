@@ -84,8 +84,8 @@
  */
 
 import java.util.Scanner;
-import java.util.regex.Pattern;
 import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class JavaRegex2DuplicateWords {
 
@@ -99,7 +99,7 @@ public class JavaRegex2DuplicateWords {
             String input = in.nextLine();
             Matcher m = p.matcher(input);
 
-            // Check for subsequences of input that match the compiled pattern
+            // Check for subsequences of input that match the compiled pattern.
             while (m.find()) {
                 input = input.replaceAll(m.group(), m.group(1));
             }

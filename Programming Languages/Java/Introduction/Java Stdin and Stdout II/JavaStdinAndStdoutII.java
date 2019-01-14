@@ -21,13 +21,13 @@
  *
  * There are three lines of output:
  *
- * 1. On the first line, print "String:" followed by the unaltered String read
+ * 1. On the first line, print "String: " followed by the unaltered String read
  *    from stdin.
  *
- * 2. On the second line, print "Double:" followed by the unaltered double read
+ * 2. On the second line, print "Double: " followed by the unaltered double read
  *    from stdin.
  *
- * 3. On the third line, print "Int:" followed by the unaltered integer read
+ * 3. On the third line, print "Int: " followed by the unaltered integer read
  *    from stdin.
  *
  * To make the problem easier, a portion of the code is already provided in the

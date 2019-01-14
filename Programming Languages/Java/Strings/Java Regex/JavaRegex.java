@@ -68,21 +68,23 @@ class MyRegex {
 public class JavaRegex {
 
     public static void main(String[] args) {
+        MyRegex myRegex = new MyRegex();
         Scanner in = new Scanner(System.in);
-        LinkedList<Boolean> res = new LinkedList<Boolean>();
+        LinkedList<Boolean> res = new LinkedList<>();
 
         try {
             while (in.hasNext()) {
                 String IP = in.next();
-                res.add(IP.matches(new MyRegex().pattern));
+                res.add(IP.matches(myRegex.pattern));
             }
         } catch (PatternSyntaxException e) {
             System.out.println("The regular expression syntax is invalid.");
         }
         in.close();
 
-        for (int i = 0; i < res.size(); i++) {
-            System.out.println(res.get(i));
+        // Prints output
+        for (boolean b : res) {
+            System.out.println(b);
         }
     }
 }
