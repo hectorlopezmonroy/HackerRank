@@ -1,5 +1,5 @@
 /*
- * Java's BigDecimal class can handle arbitrary-precision signed decimal
+ * Java's 'BigDecimal' class can handle arbitrary-precision signed decimal
  * numbers. Let's test your knowledge of them!
  *
  * Given an array, 's', of 'n' real number strings, sort them in descending
@@ -22,7 +22,7 @@
  *
  * 1 <= n <= 200
  *
- * Each s_i has 'at most' 300 digits.
+ * Each 's_i' has 'at most' 300 digits.
  *
  * Output Format
  *
@@ -68,6 +68,7 @@ public class JavaBigDecimal {
         int n = in.nextInt();
         String[] s = new String[n];
 
+        // Process input
         for (int i = 0; i < n; i++) {
             s[i] = in.next();
         }
@@ -84,6 +85,7 @@ public class JavaBigDecimal {
             }
         }));
 
+        // Prints output
         for (int i = 0; i < n; i++) {
             System.out.println(s[i]);
         }

@@ -3,7 +3,7 @@
  * so big that you can't contain them in any ordinary data types like a long
  * integer.
  *
- * Use the power of Java's BigInteger class and solve this problem.
+ * Use the power of Java's 'BigInteger' class and solve this problem.
  *
  * Input Format
  *
@@ -45,6 +45,7 @@ public class JavaBigInteger {
         BigInteger b = new BigInteger(in.nextLine());
         in.close();
 
+        // Prints output
         System.out.println(a.add(b));
         System.out.println(a.multiply(b));
     }
