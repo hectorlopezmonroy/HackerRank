@@ -1,2 +1,6 @@
 *.out
 *.class
+*.js
+*.css
+*.html
+package-list

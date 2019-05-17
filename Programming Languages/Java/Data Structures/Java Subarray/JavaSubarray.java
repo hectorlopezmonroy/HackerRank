@@ -23,7 +23,7 @@
  * The first line contains a single integer, 'n', denoting the length of array
  * A = [a_0, a_1, ... , a_(n - 1)].
  * The second line contains 'n' space-separated integers describing each
- * respective element, a_i, in array A.
+ * respective element, 'a_i', in array 'A'.
  *
  * Constraints
  *
@@ -33,7 +33,7 @@
  *
  * Output Format
  *
- * Print the number of subarrays of A having negative sums.
+ * Print the number of subarrays of 'A' having negative sums.
  *
  * Sample Input
  *
@@ -65,13 +65,19 @@ import java.util.Scanner;
 
 public class JavaSubarray {
 
+    /** Returns the sum of the subarray of A denoted by the indices.
+     * @param A an integer array.
+     * @param start the start index (inclusive) of the subarray.
+     * @param end the end index (inclusive) of the subarray.
+     * @return the sum of the subarray denoted by the indices.
+     */
     public static int subArraySum(int[] A, int start, int end) {
         int res = 0;
 
         if ((0 <= start) && (start < A.length) &&
             (0 <= end) && (end < A.length) && (start <= end)) {
             for (int i = start; i <= end; i++) {
-                res = res + A[i];
+                res += A[i];
             }
         }
         return res;
@@ -89,9 +95,13 @@ public class JavaSubarray {
         }
         in.close();
 
+        // Loops through all possible 'start' indices of the subarray
         for (int start = 0; start < n; start++) {
+
+            // Loops through all possible 'end' indices of the subarray
             for (int end = start; end < n; end++) {
                 if (subArraySum(A, start, end) < 0) {
+                    // The sum of the subarray is negative
                     res++;
                 }
             }

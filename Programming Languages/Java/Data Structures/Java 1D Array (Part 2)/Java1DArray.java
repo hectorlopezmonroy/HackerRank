@@ -3,8 +3,8 @@
  * array named 'game'. From some index 'i' (where 0 <= i < n), you can perform
  * one of the following moves:
  *
- *   * Move Backward: If cell i - 1 exists and contains a 0, you can walk back
- *     to cell i - 1.
+ *   * Move Backward: If cell i - 1 exists and contains a zero, you can walk
+ *                    back to cell i - 1.
  *
  *   * Move Forward:
  *
@@ -91,6 +91,12 @@ import java.util.Scanner;
 
 public class Java1DArray {
 
+    /** Recursively tries all move options and returns the desired boolean value.
+     * @param leap an integer denotes maximum number of spaces possible to jump.
+     * @param game an integer array denoting the game configuration.
+     * @param pos an integer denoting the current position in the game.
+     * @return a boolean 'true' if you can win the game; otherwise, 'false'.
+     */
     public static boolean isSolvable(int leap, int[] game, int pos) {
         boolean res = false;
 
@@ -101,7 +107,7 @@ public class Java1DArray {
         } else if (game.length - 1 <= pos) {
             return true;
         }
-        game[pos] = 1;
+        game[pos] = 1; // marks current position to avoid repeated cases.
         return isSolvable(leap, game, pos + 1) ||
                isSolvable(leap, game, pos - 1) ||
                isSolvable(leap, game, pos + leap);

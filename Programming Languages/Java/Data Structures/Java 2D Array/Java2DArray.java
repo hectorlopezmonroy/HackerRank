@@ -78,14 +78,28 @@ public class Java2DArray {
         }
         in.close();
 
+        // Loops through the rows of the two-dimensional array
         for (int i = 0; i < 4; i++) {
+
+            // Loops through the columns of the two-dimensional array
             for (int j = 0; j < 4; j++) {
+
+                // Upper edge of the hourglass
                 temp = arr[i][j] + arr[i][j + 1] + arr[i][j + 2];
-                temp = temp + arr[i + 1][j + 1];
-                temp = temp + arr[i + 2][j] + arr[i + 2][j + 1] + arr[i + 2][j + 2];
+
+                // Center of the hourglass
+                temp += arr[i + 1][j + 1];
+
+                // Bottom of the hourglass
+                temp += arr[i + 2][j] + arr[i + 2][j + 1] + arr[i + 2][j + 2];
+
                 if (i == 0 && j == 0) {
+                    // Initializes 'max' with the value of the first hourglass
                     max = temp;
                 } else if (temp > max) {
+                    /* Updates 'max' if there's another hourglass with a greater
+                     * value.
+                     */
                     max = temp;
                 }
             }
