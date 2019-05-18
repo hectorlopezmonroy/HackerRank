@@ -38,6 +38,17 @@
  *       It need not be a single query.
  */
 
+/*
+ * The approach for this query is:
+ *   1.- We get what's the minimum CITY name length
+ *       (or maximum for the second query).
+ *   2.- The intermediate query provides the CITY names (without repetitions)
+ *       for those cities with the smallest length (or largest length for the
+ *       second query), ordered alphabetically.
+ *   3.- The outer query gets the first CITY from the previous step, completing
+ *       the requirements for this challenge.
+ */
+
 SELECT *
 FROM
     (SELECT DISTINCT CITY, LENGTH(CITY)
