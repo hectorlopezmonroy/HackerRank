@@ -1,5 +1,5 @@
 /*
- * For this problem, we have 2 types of queries you can perform on a List:
+ * For this problem, we have '2' types of queries you can perform on a 'List':
  *
  *   1. Insert 'y' at index 'x':
  *      Insert
@@ -17,14 +17,17 @@
  *
  * The first line contains an integer, 'N' (the initial number of elements in
  * 'L').
+ *
  * The second line contains 'N' space-separated integers describing 'L'.
+ *
  * The third line contains an integer, 'Q' (the number of queries).
+ *
  * The '2Q' subsequent lines describe the queries, and each query is described
  * over two lines:
  *
  *   * If the first line of a query contains the String "Insert", then the
- *     second line contains two space-separated integers 'x' and 'y', and the
- *     value 'y' must be inserted into 'L' at index 'x'.
+ *     second line contains two space-separated integers 'x' 'y', and the value
+ *     'y' must be inserted into 'L' at index 'x'.
  *
  *   * If the first line of a query contains the String "Delete", then the
  *     second line contains index 'x', whose element must be deleted from 'L'.
@@ -35,7 +38,7 @@
  *
  * 1 <= Q <= 4000
  *
- * Each element in is a '32-bit integer'.
+ * * Each element in 'L' is a '32-bit integer'.
  *
  * Output Format
  *
@@ -51,7 +54,7 @@
  * Delete
  * 0
  *
- * Sample Input
+ * Sample Output
  *
  * 0 1 78 12 23
  *
@@ -59,13 +62,13 @@
  *
  * L = [12, 0, 1, 78, 12]
  *
- * Q_0: "Insert" 23 at index 5.
+ * Q_0: "Insert" 23 at index '5'.
  * L_0 = [12, 0, 1, 78, 12, 23]
  *
- * Q_1: "Delete" the element at index 0.
+ * Q_1: "Delete" the element at index '0'.
  * L_1 = [0, 1, 78, 12, 23]
  *
- * Having performed all 'Q' queries, we print L_1 as a single line of
+ * Having performed all 'Q' queries, we print 'L_1' as a single line of
  * space-separated integers.
  */
 
@@ -74,9 +77,11 @@ import java.util.LinkedList;
 
 public class JavaList {
 
+    /** Prints the 'List' as a single line of space-separated integers.
+     * @param L a LinkedList<Integer>.
+     */
     public static void printList(LinkedList<Integer> L) {
-        // Print the updated list L as a single line of space-separated
-        // integers.
+
         for (Integer i : L) {
             System.out.print(i + " ");
         }
@@ -85,24 +90,28 @@ public class JavaList {
 
     public static void main(String[] args) {
         int Q = 0;
+        LinkedList<Integer> L = new LinkedList<>();
         Scanner in = new Scanner(System.in);
         int N = in.nextInt();
-        LinkedList<Integer> L = new LinkedList<Integer>();
 
-        // Initialize list L
+        // Initialize list L.
         for (int i = 0; i < N; i++) {
             L.add(in.nextInt());
         }
 
+        // Receive as input the number of queries, 'Q'.
         Q = in.nextInt();
-        // Process the Q queries
+
+        // Process the 'Q' queries.
         for (int i = 0; i < Q; i++) {
             if (in.next().equals("Insert")) {
+                // Query to "Insert" an element to the list 'L'.
                 int index = in.nextInt();
                 int elem = in.nextInt();
 
                 L.add(index, elem);
-             } else {
+            } else {
+                // Query to "Delete" an element from the list 'L'.
                 int index = in.nextInt();
 
                 L.remove(index);
@@ -110,7 +119,7 @@ public class JavaList {
         }
         in.close();
 
-        // Prints output as requested
+        // Prints output as requested.
         printList(L);
     }
 }
