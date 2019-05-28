@@ -1,6 +1,6 @@
 /*
- * Sometimes it's better to use dynamic size arrays. Java's Arraylist can
- * provide you this feature. Try to solve this problem using Arraylist.
+ * Sometimes it's better to use dynamic size arrays. Java's 'Arraylist' can
+ * provide you this feature. Try to solve this problem using 'Arraylist'.
  *
  * You are given 'n' lines. In each line there are zero or more integers. You
  * need to answer a few queries where you need to tell the number located in
@@ -67,13 +67,13 @@ public class JavaArrayList {
         Scanner in = new Scanner(System.in);
         int q = 0;
         int n = in.nextInt();
-        ArrayList<String> res = new ArrayList<String>();
-        ArrayList<ArrayList<Integer>> lines = new ArrayList<ArrayList<Integer>>();
+        ArrayList<String> res = new ArrayList<>();
+        ArrayList<ArrayList<Integer>> lines = new ArrayList<>();
 
-        // First we must save the 'n' lines
+        // First we must save the 'n' lines of integers
         for (int i = 0; i < n; i++) {
             int d = in.nextInt();
-            ArrayList<Integer> line = new ArrayList<Integer>();
+            ArrayList<Integer> line = new ArrayList<>();
 
             // Saving the 'd' elements of each line
             for (int j = 0; j < d; j++) {
@@ -82,16 +82,20 @@ public class JavaArrayList {
             lines.add(line);
         }
 
+        // Number of queries
         q = in.nextInt();
-        // Saving the 'q' queries
+
+        // Saving the results of the 'q' queries
         for (int i = 0; i < q; i++) {
             int x = in.nextInt() - 1; // Note the queries first index is 1 but
             int y = in.nextInt() - 1; // Java's ArrayList first index is 0.
 
             if (0 <= x && x < lines.size() &&
                 0 <= y && y < lines.get(x).size()) {
+                // Valid query
                 res.add(lines.get(x).get(y).toString());
             } else {
+                // Invalid query
                 res.add("ERROR!");
             }
         }

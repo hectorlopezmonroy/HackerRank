@@ -38,7 +38,7 @@
  *      some number of integers.
  *
  *   2. Reads 'n' integers corresponding to a_0, a_1, ... , a_(n - 1) from stdin
- *      and saves each integer a_i to a variable, 'val'.
+ *      and saves each integer 'a_i' to a variable, 'val'.
  *
  *   3. Attempts to print each element of an array of integers named 'a'.
  *
@@ -48,8 +48,8 @@
  *
  *   2. Modify the code in the loop so that it saves each sequential value to
  *      its corresponding location in the array. For example, the first value
- *      must be stored in a_0, the second value must be stored in a_1, and so
- *      on.
+ *      must be stored in 'a_0', the second value must be stored in 'a_1', and
+ *      so on.
  *
  * Good luck!
  *

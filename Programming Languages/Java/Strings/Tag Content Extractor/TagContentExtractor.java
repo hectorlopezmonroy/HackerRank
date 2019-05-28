@@ -20,19 +20,21 @@
  * Input Format
  *
  * The first line of input contains a single integer, 'N' (the number of lines).
+ *
  * The 'N' subsequent lines each contain a line of text.
  *
  * Constraints
  *
  * 1 <= N <= 100
  *
- * Each line contains a maximum of 10^4 printable characters.
+ * * Each line contains a maximum of '10^4' printable characters.
  *
- * The total number of characters in all test cases will not exceed 10^6.
+ * * The total number of characters in all test cases will not exceed '10^6'.
  *
  * Output Format
  *
  * For each line, print the content enclosed within valid tags.
+ *
  * If a line contains multiple instances of valid content, print out each
  * instance of valid content on a new line; if no valid content is found, print
  * "None".
@@ -56,18 +58,19 @@
 
 import java.util.Scanner;
 import java.util.LinkedList;
-import java.util.regex.Pattern;
 import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class TagContentExtractor {
 
     public static void main(String[] args) {
+        LinkedList<String> res = new LinkedList<>();
         String regex = "<(.+)>([^<]+)</\\1>";
         Pattern p = Pattern.compile(regex);
         Scanner in = new Scanner(System.in);
         int testCases = Integer.parseInt(in.nextLine());
-        LinkedList<String> res = new LinkedList<String>();
 
+        // Process input
         while (testCases > 0) {
             boolean matchFound = false;
             String input = in.nextLine();
@@ -84,6 +87,7 @@ public class TagContentExtractor {
         }
         in.close();
 
+        // Prints output as requested.
         for (String s : res) {
             System.out.println(s);
         }

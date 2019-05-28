@@ -10,14 +10,14 @@
  *
  * Some valid IP address:
  *
- *   000.12.12..034
+ *   000.12.12.034
  *   121.234.12.12
  *   23.45.12.56
  *
  * Some invalid IP address:
  *
  *   000.12.234.23.23
- *   666.666.23.23.
+ *   666.666.23.23
  *   .213.123.23.32
  *   23.45.22.32.
  *   I.Am.not.an.ip
@@ -68,22 +68,24 @@ class MyRegex {
 public class JavaRegex {
 
     public static void main(String[] args) {
+        MyRegex myRegex = new MyRegex();
         Scanner in = new Scanner(System.in);
-        MyRegex regex = new MyRegex();
-        LinkedList<Boolean> res = new LinkedList<Boolean>();
+        LinkedList<Boolean> res = new LinkedList<>();
 
         try {
+            // Process input
             while (in.hasNext()) {
                 String IP = in.next();
-                res.add(IP.matches(regex.pattern));
+                res.add(IP.matches(myRegex.pattern));
             }
         } catch (PatternSyntaxException e) {
             System.out.println("The regular expression syntax is invalid.");
         }
         in.close();
 
-        for (int i = 0; i < res.size(); i++) {
-            System.out.println(res.get(i));
+        // Prints output
+        for (boolean b : res) {
+            System.out.println(b);
         }
     }
 }

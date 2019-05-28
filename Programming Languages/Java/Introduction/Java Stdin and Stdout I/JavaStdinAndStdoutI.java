@@ -2,7 +2,7 @@
  * Most HackerRank challenges require you to read input from stdin (standard
  * input) and write output to stdout (standard output).
  *
- * One popular way to read input from stdin is by using the Scanner class and
+ * One popular way to read input from stdin is by using the 'Scanner' class and
  * specifying the 'Input Stream' as 'System.in'. For example:
  *
  *   Scanner scanner = new Scanner(System.in);
@@ -25,7 +25,7 @@
  *   myString is: Hi
  *   myInt is: 5
  *
- * Alternatively, you can use the BufferedReader class.
+ * Alternatively, you can use the 'BufferedReader' class.
  *
  * Task
  * In this challenge, you must read 3 integers from stdin and then print them to
@@ -57,12 +57,15 @@ public class JavaStdinAndStdoutI {
         Scanner in = new Scanner(System.in);
         int[] arr = new int[3];
 
+        // Process input
         for (int i = 0; i < 3; i++) {
             arr[i] = in.nextInt();
         }
         in.close();
-        for (int i = 0; i < arr.length; i++) {
-            System.out.println(arr[i]);
+
+        // Prints output
+        for (int i : arr) {
+            System.out.println(i);
         }
     }
 }

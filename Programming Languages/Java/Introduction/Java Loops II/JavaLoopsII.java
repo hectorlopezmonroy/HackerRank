@@ -1,16 +1,20 @@
 /*
- * We use the integers a, b, and n to create the following series:
- * (a + 2^0 * b), (a + 2^0 * b + 2^1 * b), ..., (a + 2^0 * b + ... + 2^(n - 1) * b)
+ * We use the integers 'a', 'b', and 'n' to create the following series:
  *
- * You are given q queries in the form of a, b, and n. For each query, print the
- * series corresponding to the given a, b, and n values as a single line of n
- * space-separated integers.
+ * (a + 2^0 * b),
+ * (a + 2^0 * b + 2^1 * b),
+ * ... ,
+ * (a + 2^0 * b + ... + 2^(n - 1) * b)
+ *
+ * You are given 'q' queries in the form of 'a', 'b', and 'n'. For each query,
+ * print the series corresponding to the given 'a', 'b', and 'n' values as a
+ * single line of 'n' space-separated integers.
  *
  * Input Format
  *
- * The first line contains an integer, q_1 denoting the number of queries.
- * Each line i of the subsequent lines contains three space-separated integers
- * describing the respective a_i, b_i and n_i values for that query.
+ * The first line contains an integer, 'q_1' denoting the number of queries.
+ * Each line 'i' of the subsequent lines contains three space-separated integers
+ * describing the respective 'a_i', 'b_i' and 'n_i' values for that query.
  *
  * Constraints
  *
@@ -23,7 +27,7 @@
  * Output Format
  *
  * For each query, print the corresponding series on a new line. Each series
- * must be printed in order as a single line of n space-separated integers.
+ * must be printed in order as a single line of 'n' space-separated integers.
  *
  * Sample Input
  *
@@ -80,6 +84,7 @@ public class JavaLoopsII {
         int numQueries = in.nextInt();
         int[][] intArr = new int[numQueries][3];
 
+        // Process input
         for (int i = 0; i < numQueries; i++) {
             intArr[i][0] = in.nextInt();
             intArr[i][1] = in.nextInt();
@@ -93,10 +98,16 @@ public class JavaLoopsII {
                 for (int k = 0; k <= j; k++) {
                     tmp = tmp + (Math.pow(2, k) * intArr[i][1]);
                 }
+
+                // Prints output
                 System.out.print((int) tmp);
                 if (j < intArr[i][2] - 1) {
+                    // Prints a space between each element in the series.
                     System.out.print(" ");
                 } else {
+                    /* Prints a new line after the series has been fully
+                     * printed.
+                     */
                     System.out.println("");
                 }
             }

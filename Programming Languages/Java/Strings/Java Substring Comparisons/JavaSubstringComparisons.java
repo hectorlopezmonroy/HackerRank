@@ -8,7 +8,7 @@
  *
  *     For example, ball < cat, dog < dorm, Happy < happy, Zoo < ball.
  *
- *   * A substring of a string is a contiguous block of characters in the
+ *   * A 'substring' of a string is a contiguous block of characters in the
  *     string. For example, the substrings of "abc" are "a", "b", "c", "ab",
  *     "bc", and "abc".
  *
@@ -66,19 +66,29 @@ public class JavaSubstringComparisons {
         String largest = "";
         String smallest = "";
 
-        // Complete the function
-        // 'smallest' must be the lexicographically smallest substring of length 'k'
-        // 'largest' must be the lexicographically largest substring of length 'k'
+        /* Loops through the input string 's' checking each substring with
+         * length 'k'.
+         */
         for (int i = 0; i < s.length() - k + 1; i++) {
             tmp = s.substring(i, i + k);
+
             if (i == 0) {
+                /* First substring of length 'k' is both the smallest and the
+                 * largest.
+                 */
                 smallest = s.substring(i, i + k);
                 largest = s.substring(i, i + k);
             }
             if (tmp.compareTo(smallest) < 0) {
+                /* Current substring ('tmp') is smallest than the current
+                 * smallest, we update our current smallest.
+                 */
                 smallest = tmp;
             }
             if (tmp.compareTo(largest) > 0) {
+                /* Current substring ('tmp') is largest than the current
+                 * largest, we update our current largest.
+                 */
                 largest = tmp;
             }
         }

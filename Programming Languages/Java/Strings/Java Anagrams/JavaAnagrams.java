@@ -94,39 +94,61 @@ public class JavaAnagrams {
 
     static boolean isAnagram(String a, String b) {
         boolean res = false;
-        HashMap<Character, Integer> myMap = new HashMap<Character, Integer>();
+        HashMap<Character, Integer> myMap = new HashMap<>();
 
         if (a.length() == b.length()) {
+            /* Loops through the first input string. For each character it finds
+             * either adds it to the map of characters and their count or
+             * updates the count for that character.
+             */
             for (int i = 0; i < a.length(); i++) {
                 char c = Character.toLowerCase(a.charAt(i));
                 if (myMap.containsKey(c)) {
+                    // Updates this character's count
                     myMap.put(c, myMap.get(c) + 1);
                 } else {
+                    // Newly found character
                     myMap.put(c, 1);
                 }
             }
+
+            /* Loops through the second input string. For each character it
+             * finds either removes it completely from the map of characters and
+             * their count (this character count == 1) or decreases the count
+             * for that character.
+             */
             for (int i = 0; i < b.length(); i++) {
                 char c = Character.toLowerCase(b.charAt(i));
                 if (myMap.containsKey(c)) {
                     if (myMap.get(c) > 1) {
+                        // Decreases this character's count
                         myMap.put(c, myMap.get(c) - 1);
                     } else if (myMap.get(c) == 1) {
+                        // Removes this character's count
                         myMap.remove(c);
-                    } else {
-                        res = false;
-                        break;
                     }
                 } else {
+                    /* This character isn't in input string 'a' or they count is
+                     * different. Therefore, 'a' and 'b' are not anagrams.
+                     */
                     res = false;
                     break;
                 }
             }
+
             if (myMap.size() == 0) {
+                /* All characters found in 'a' were also found in string 'b' and
+                 * their count is the same. 'a' and 'b' are anagrams.
+                 */
                 res = true;
             } else {
+                /* The count of the characters from 'a' is different than those
+                 * in 'b'. 'a' and 'b' aren't anagrams.
+                 */
                 res = false;
             }
         } else {
+            // Input strings have different lenghts. They can't be anagrams.
             res = false;
         }
         return res;
@@ -139,6 +161,7 @@ public class JavaAnagrams {
         in.close();
         boolean ret = isAnagram(a, b);
 
+        // Prints output
         System.out.println((ret) ? "Anagrams" : "Not Anagrams");
     }
 }

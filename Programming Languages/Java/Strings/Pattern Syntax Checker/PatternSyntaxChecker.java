@@ -46,8 +46,10 @@ public class PatternSyntaxChecker {
         in.nextLine();
         boolean[] ret = new boolean[N];
 
+        // Process input
         for (int i = 0; i < N; i++) {
             String regex = in.nextLine();
+
             try {
                 Pattern p = Pattern.compile(regex);
                 ret[i] = true;
@@ -57,6 +59,7 @@ public class PatternSyntaxChecker {
         }
         in.close();
 
+        // Prints output
         for (boolean b : ret) {
             if (b) {
                 System.out.println("Valid");

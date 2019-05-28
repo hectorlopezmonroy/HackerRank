@@ -1,7 +1,7 @@
 /*
  * Given a string, 's', and two indices, 'start' and 'end', print a substring
  * consisting of all characters in the inclusive range from 'start' to
- * 'end - 1'. You'll find the 'String' class' substring method helpful in
+ * 'end - 1'. You'll find the 'String' class' 'substring()' method helpful in
  * completing this challenge.
  *
  * Input Format
@@ -43,6 +43,7 @@ public class JavaSubstring {
         int end = in.nextInt();
         in.close();
 
+        // Prints output
         System.out.println(s.substring(start, end));
     }
 }

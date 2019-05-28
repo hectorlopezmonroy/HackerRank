@@ -82,32 +82,32 @@ import java.util.LinkedList;
 
 class Pair {
     public String num;
-    public byte dataTypeRep;
+    public byte datatypesRep;
 }
 
 public class JavaDatatypes {
 
-    public static void printResults(LinkedList<Pair> res) {
-        for (Pair p: res) {
-            if ((byte) p.dataTypeRep == (byte) 0) {
+    public static void printResults(LinkedList<Pair> datatypesList) {
+        for (Pair p: datatypesList) {
+            if ((byte) p.datatypesRep == (byte) 0) {
                 System.out.println(p.num + " can't be fitted anywhere.");
-            } else if ((byte) p.dataTypeRep == (byte) 15) {
+            } else if ((byte) p.datatypesRep == (byte) 8) {
+                System.out.println(p.num + " can be fitted in:");
+                System.out.println("* long");
+            } else if ((byte) p.datatypesRep == (byte) 12) {
+                System.out.println(p.num + " can be fitted in:");
+                System.out.println("* int");
+                System.out.println("* long");
+            } else if ((byte) p.datatypesRep == (byte) 14) {
+                System.out.println(p.num + " can be fitted in:");
+                System.out.println("* short");
+                System.out.println("* int");
+                System.out.println("* long");
+            } else if ((byte) p.datatypesRep == (byte) 15) {
                 System.out.println(p.num + " can be fitted in:");
                 System.out.println("* byte");
                 System.out.println("* short");
                 System.out.println("* int");
-                System.out.println("* long");
-            } else if ((byte) p.dataTypeRep == (byte) 14) {
-                System.out.println(p.num + " can be fitted in:");
-                System.out.println("* short");
-                System.out.println("* int");
-                System.out.println("* long");
-            } else if ((byte) p.dataTypeRep == (byte) 12) {
-                System.out.println(p.num + " can be fitted in:");
-                System.out.println("* int");
-                System.out.println("* long");
-            } else if ((byte) p.dataTypeRep == (byte) 8) {
-                System.out.println(p.num + " can be fitted in:");
                 System.out.println("* long");
             }
         }
@@ -122,36 +122,55 @@ public class JavaDatatypes {
             byte b = 0;
             String s = in.next();
             Pair tmp = new Pair();
+
             try {
                 /* In order to represent which datatypes can store string s'
-                 * numerical value, I'll use something similar to the system in
-                 * place to represent files permissions in linux (octal numbers),
-                 * so that an integer that can be stored as a byte (the smallest
-                 * size) can also be stored in a short, an int and a long. But
-                 * not necessarily an integer that can be stored in a long fits
-                 * in a byte.
-                 * So, the order is long (2^3), int (2^2), short(2^1) and
-                 * byte (2^0).
+                 * numerical value, we use a byte in a similar fashion to the
+                 * files permissions representation in linux (octal numbers).
+                 *
+                 * An integer that can be stored as a byte (the smallest size)
+                 * can also be stored in a short, an int and a long. But not
+                 * necessarily an integer that can be stored in a long fits in
+                 * a byte. Therefore, the order is
+                 * long  (2^3),
+                 * int   (2^2),
+                 * short (2^1),
+                 * byte  (2^0).
                  */
 
                 long l = Long.parseLong(s);
-                if (-128 <= l && l <= 127) {
+                if (-Math.pow(2,7) <= l && l <= Math.pow(2,7) - 1 ) {
+                    /* If s can be fitted in a byte, then it can also be fitted
+                     * in a short, int and long.
+                     */
                     b = 15; // 2^3 + 2^2 + 2^1 + 2^0
-                } else if (-32768 <= l && l <= 32767) {
+                } else if (-Math.pow(2,15) <= l && l <= Math.pow(2,15) - 1) {
+                    /* If s can't be fitted in a byte, but it can be fitted in a
+                     * short, then it can also be fitted in an int and long.
+                     */
                     b = 14; // 2^3 + 2^2 + 2^1
                 } else if (-Math.pow(2,31) <= l && l <= Math.pow(2,31) - 1) {
+                    /* If s can't be fitted in a byte nor a short, but it can be
+                     * fitted in an int then it can also be fitted in a long.
+                     */
                     b = 12; // 2^3 + 2^2
                 } else if (-Math.pow(2,63) <= l && l <= Math.pow(2,63) - 1) {
+                    /* If s can't be fitted in a byte, short, int, but it can be
+                     * fitted in a long.
+                     */
                     b = 8;  // 2^3
                 }
             } catch (NumberFormatException e) {
+                // If s can't be parsed as a long.
                 b = 0;
             }
             tmp.num = s;
-            tmp.dataTypeRep = b;
+            tmp.datatypesRep = b;
             res.add(tmp);
         }
         in.close();
+
+        // Prints output
         printResults(res);
     }
 }
