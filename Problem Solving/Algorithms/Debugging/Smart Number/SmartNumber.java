@@ -1,5 +1,5 @@
 /*
- * In this challenge, the task is to debug the existing code to succesfully
+ * In this challenge, the task is to debug the existing code to successfully
  * execute all provided test files.
  *
  * A number is called a smart number if it has an odd number of factors. Given
