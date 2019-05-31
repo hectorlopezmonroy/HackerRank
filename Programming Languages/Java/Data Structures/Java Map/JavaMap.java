@@ -14,9 +14,9 @@
  *
  * Constraints
  *
- * A person's name consists of only lower-case English letters and it may be in
- * the format 'first-name last-name' or in the format 'first-name'. Each phone
- * number has exactly 8 digits without any leading zeros.
+ * * A person's name consists of only lower-case English letters and it may be
+ *   in the format 'first-name last-name' or in the format 'first-name'. Each
+ *   phone number has exactly '8' digits without any leading zeros.
  *
  * 1 <= n <= 100000
  *
@@ -51,20 +51,20 @@
  * harry=12299933
  */
 
-import java.util.Scanner;
 import java.util.HashMap;
+import java.util.Scanner;
 import java.util.LinkedList;
 
 public class JavaMap {
 
     public static void main(String[] args) {
+        HashMap<String, String> phoneBook = new HashMap<>();
+        LinkedList<String> res = new LinkedList<>();
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
         in.nextLine();
-        LinkedList<String> res = new LinkedList<String>();
-        HashMap<String, String> phoneBook = new HashMap<String, String>();
 
-        // Populating phonebook
+        // Process input; populating phonebook
         for (int i = 0; i < n; i++) {
             String name = in.nextLine();
             String phone = in.nextLine();
