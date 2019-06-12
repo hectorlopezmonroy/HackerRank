@@ -7,25 +7,25 @@
 #
 # * A number which is the position of the element:
 #
-#   >>arr[4]
-#     => 3
+#   >> arr[4]
+#   => 3
 #
 #   or
 #
-#   >>arr.at(4)
-#     => 3
+#   >> arr.at(4)
+#   => 3
 #
 # * A range indicating the start and the end positions:
 #
-#   >>arr[1..3] # .. indicates both indices are inclusive.
-#     => [5,1,2]
-#   >>arr[1...3] # ... indicates the last index is excluded.
-#     => [5,1]
+#   >> arr[1..3] # .. indicates both indices are inclusive.
+#   => [5, 1, 2]
+#   >> arr[1...3] # ... indicates the last index is excluded.
+#   => [5, 1]
 #
 # * Start index and the length of the range:
 #
-#   >>arr[1,4]
-#     => [5, 1, 2, 3]
+#   >> arr[1, 4]
+#   => [5, 1, 2, 3]
 #
 # For this challenge, your task is to complete the functions using syntax as
 # explained above.
