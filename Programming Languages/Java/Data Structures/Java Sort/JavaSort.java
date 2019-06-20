@@ -27,8 +27,8 @@
  *
  * 0 <= CGPA <= 4.00
  *
- * The name contains only lowercase English letters. The 'ID' contains only
- * integer numbers without leading zeros. The 'CGPA' will contain, at most, 2
+ * The 'name' contains only lowercase English letters. The 'ID' contains only
+ * integer numbers without leading zeros. The 'CGPA' will contain, at most, '2'
  * digits after the decimal point.
  *
  * Output Format
@@ -110,7 +110,7 @@ public class JavaSort {
         Student[] students = new Student[N];
         Checker checker = new Checker();
 
-        // Initializes Students input data
+        // Process Students input data
         for (int i = 0; i < N; i++) {
             students[i] = new Student(in.nextInt(), in.next(), in.nextFloat());
         }

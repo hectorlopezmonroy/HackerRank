@@ -30,16 +30,16 @@
  *
  *   * The 'Student' class should implement:
  *
- *     * The constructor Student(int id, String name, double cgpa).
+ *     * The constructor 'Student(int id, String name, double cgpa)'.
  *
- *     * The method int getID() to return the id of the student.
+ *     * The method 'int getID()' to return the id of the student.
  *
- *     * The method String getName() to return the name of the student.
+ *     * The method 'String getName()' to return the name of the student.
  *
- *     * The method double getCGPA() to return the CGPA of the student.
+ *     * The method 'double getCGPA()' to return the CGPA of the student.
  *
  *   * The 'Priorities' class should implement the method
- *     List<Student> getStudents(List<String> events) to process all the given
+ *     'List<Student> getStudents(List<String> events)' to process all the given
  *     events and return all the students yet to be served in the priority
  *     order.
  *
@@ -95,7 +95,7 @@
  *
  * Explanation
  *
- * In this case, the number of events is 12. Let the name of the queue be 'Q'.
+ * In this case, the number of events is '12'. Let the name of the queue be 'Q'.
  *
  *   * John is added to 'Q'. So, it contains (John, 3.75, 50).
  *
@@ -165,6 +165,39 @@ class Student {
     }
 }
 
+class Priorities {
+
+    public List<Student> getStudents(List<String> events) {
+        List<Student> res = new ArrayList<>();
+        CustomComparator myComparator = new CustomComparator();
+        PriorityQueue<Student> myPriorityQueue = new PriorityQueue<>(1, myComparator);
+
+        // Loops through the List of events.
+        for (String event : events) {
+            String[] eventArgs = event.split(" ");
+
+            if (eventArgs[0].equals("ENTER")) {
+                // Current event is an "ENTER" event.
+                Student s = new Student(Integer.valueOf(eventArgs[3]),
+                                        eventArgs[1],
+                                        Double.valueOf(eventArgs[2]));
+
+                myPriorityQueue.add(s);
+            } else {
+                // Current event is a "SERVED" event.
+                myPriorityQueue.poll();
+            }
+        }
+
+        // Once all events have been taken care of, we add those students
+        // remaining in the PriorityQueue.
+        while (myPriorityQueue.peek() != null) {
+            res.add(myPriorityQueue.poll());
+        }
+        return res;
+    }
+}
+
 class CustomComparator implements Comparator<Student> {
 
     public int compare(Student a, Student b) {
@@ -178,32 +211,6 @@ class CustomComparator implements Comparator<Student> {
             }
         } else {
             res = Double.compare(b.getCGPA(), a.getCGPA());
-        }
-        return res;
-    }
-}
-
-class Priorities {
-
-    public List<Student> getStudents(List<String> events) {
-        List<Student> res = new ArrayList<Student>();
-        CustomComparator myComparator = new CustomComparator();
-        PriorityQueue<Student> myPriorityQueue = new PriorityQueue<>(1, myComparator);
-
-        for (String event : events) {
-            String[] eventArgs = event.split(" ");
-            if (eventArgs[0].equals("ENTER")) {
-                Student s = new Student(Integer.valueOf(eventArgs[3]),
-                                        eventArgs[1],
-                                        Double.valueOf(eventArgs[2]));
-
-                myPriorityQueue.add(s);
-            } else {
-                myPriorityQueue.poll();
-            }
-        }
-        while (myPriorityQueue.peek() != null) {
-            res.add(myPriorityQueue.poll());
         }
         return res;
     }

@@ -7,8 +7,8 @@
  * A string containing only parentheses is balanced if the following is true:
  *
  *   1. If it is an empty string.
- *   2. If A and B are correct, AB is correct,
- *   3. If A is correct, (A) and {A} and [A] are also correct.
+ *   2. If 'A' and 'B' are correct, 'AB' is correct,
+ *   3. If 'A' is correct, (A) and {A} and [A] are also correct.
  *
  * Examples of some correctly balanced strings are: "{}()", "[{()}]", "({()})".
  *
@@ -51,17 +51,17 @@ public class JavaStack {
 
     public static boolean isBalanced(String s) {
         boolean res = false;
-        Stack<Character> myStack = new Stack<Character>();
+        Stack<Character> myStack = new Stack<>();
 
         if (s.length() == 0) {
-            // An empty string is balanced
+            // An empty string is balanced.
             res = true;
         } else {
             for (int i = 0; i < s.length(); i++) {
                 char c = s.charAt(i);
 
                 if (c == '{' || c == '[' || c == '(') {
-                    // If an opening character is found, add it to the stack
+                    // If an opening character is found, push it into the stack.
                     myStack.push(c);
                 } else if (myStack.size() > 0) {
                     // If the stack have elements, check if the character found
@@ -90,15 +90,15 @@ public class JavaStack {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        LinkedList<Boolean> res = new LinkedList<Boolean>();
+        LinkedList<Boolean> res = new LinkedList<>();
 
-        // Checks if each input string is balanced
+        // Checks if each input string is balanced.
         while (in.hasNext()) {
             res.add(isBalanced(in.nextLine()));
         }
         in.close();
 
-        // Prints output as requested
+        // Prints output as requested.
         for (boolean b : res) {
             System.out.println(b ? "true" : "false");
         }

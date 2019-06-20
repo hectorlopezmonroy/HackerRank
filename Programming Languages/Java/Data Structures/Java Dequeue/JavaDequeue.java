@@ -37,7 +37,7 @@
  *
  * M <= N
  *
- * The numbers in the array will range between [0, 10000000].
+ * * The numbers in the array will range between [0, 10000000].
  *
  * Output Format
  *
@@ -71,19 +71,19 @@
  */
 
 import java.util.Deque;
-import java.util.Scanner;
 import java.util.HashSet;
+import java.util.Scanner;
 import java.util.ArrayDeque;
 
 public class JavaDequeue {
 
     public static void main(String[] args) {
-        int max = 0;
+        Deque<Integer> myDequeue = new ArrayDeque<>();
+        HashSet<Integer> mySet = new HashSet<>();
         Scanner in = new Scanner(System.in);
         int N = in.nextInt();
         int M = in.nextInt();
-        HashSet<Integer> mySet = new HashSet<Integer>();
-        Deque<Integer> myDequeue = new ArrayDeque<Integer>();
+        int max = 0;
 
         // Process input
         for (int i = 0; i < N; i++) {
