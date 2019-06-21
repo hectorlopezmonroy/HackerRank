@@ -9,7 +9,7 @@
  *
  * 'divisorSum' function just takes an integer as input and return the sum of
  * all its divisors. For example, divisors of 6 are 1, 2, 3 and 6, so
- * 'divisor_sum' should return 12. The value of n will be at most 1000.
+ * 'divisor_sum' should return 12. The value of 'n' will be at most 1000.
  *
  * Read the partially completed code in the editor and complete it. You just
  * need to write the 'MyCalculator' class only. Your class shouldn't be public.
@@ -45,7 +45,7 @@ class MyCalculator implements AdvancedArithmetic {
        // n after this point, except n, previously added to the sum.
        for (int i = 2; i <= n / 2; i++) {
            if (n % i == 0) {
-               res = res + i;
+               res += i;
            }
        }
        return res;
