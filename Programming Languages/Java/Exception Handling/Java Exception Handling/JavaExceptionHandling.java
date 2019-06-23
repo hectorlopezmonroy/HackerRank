@@ -2,7 +2,7 @@
  * You are required to compute the power of a number by implementing a
  * calculator. Create a class 'MyCalculator' which consists of a single method
  * 'long power(int, int)'. This method takes two integers, 'n' and 'p', as
- * parameters and finds n^p. If either 'n' or 'p' is negative, then the method
+ * parameters and finds 'n^p'. If either 'n' or 'p' is negative, then the method
  * must throw an exception which says "n or p should not be negative.". Also, if
  * both 'n' and 'p' are zero, then the method must throw an exception which says
  * "n and p should not be zero.".
@@ -28,7 +28,7 @@
  *
  * Output Format
  *
- * Each line of the output contains the result n^p, if both 'n' and 'p' are
+ * Each line of the output contains the result 'n^p', if both 'n' and 'p' are
  * positive. If eiter 'n' or 'p' is negative, the output contains "n and p
  * should be non-negative.". If both 'n' and 'p' are zero, the output contains
  * "n and p should not be zero.". This is printed by the locked stub code in the
@@ -88,7 +88,7 @@ public class JavaExceptionHandling {
     public static final Scanner in = new Scanner(System.in);
 
     public static void main(String[] args) {
-        ArrayList<String> res = new ArrayList<String>();
+        ArrayList<String> res = new ArrayList<>();
 
         // Process input
         while (in.hasNextInt()) {
