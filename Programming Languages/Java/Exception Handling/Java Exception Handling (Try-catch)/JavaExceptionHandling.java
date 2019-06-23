@@ -4,14 +4,14 @@
  * special processing - often changing the normal flow of program execution.
  * (Wikipedia)
  *
- * Java has built-in mechanism to handle exceptions. Using the 'try' statement
+ * Java has a built-in mechanism to handle exceptions. Using the 'try' statement
  * we can test a block of code for errors. The 'catch' block contains the code
  * that says what to do if exception occurs.
  *
  * This problem will test your knowledge on try-catch block.
  *
  * You will be given two integers 'x' and 'y' as input, you have to compute x/y.
- * If 'x' and 'y' are not 32 bit signed integers or if 'y' is zero, exception
+ * If 'x' and 'y' are not '32' bit signed integers or if 'y' is zero, exception
  * will occur and you have to report it. Read sample Input/Output to know what
  * to report in case of exceptions.
  *
@@ -57,10 +57,10 @@ import java.util.Scanner;
 public class JavaExceptionHandling {
 
     public static void main(String[] args) {
-        int res = 0;
         Scanner in = new Scanner(System.in);
         String x = in.nextLine();
         String y = in.nextLine();
+        int res = 0;
         in.close();
 
         try {
