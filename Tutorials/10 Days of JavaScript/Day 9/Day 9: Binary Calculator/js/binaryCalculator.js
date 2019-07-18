@@ -148,47 +148,64 @@ let btnSub = document.getElementById("btnSub");
 let btnMul = document.getElementById("btnMul");
 let btnDiv = document.getElementById("btnDiv");
 
+// When 'btn0' is clicked, a '0' is added to the 'res' div.
 btn0.onclick = function() {
     res.innerHTML = res.innerHTML + 0;
 }
 
+// When 'btn1' is clicked, a '1' is added to the 'res' div.
 btn1.onclick = function() {
     res.innerHTML = res.innerHTML + 1;
 }
 
+// When 'btnSum' is clicked, a '+' is added to the 'res' div.
 btnSum.onclick = function() {
     res.innerHTML = res.innerHTML + '+';
 }
 
+// When 'btnSub' is clicked, a '-' is added to the 'res' div.
 btnSub.onclick = function() {
     res.innerHTML = res.innerHTML + '-';
 }
 
+// When 'btnMul' is clicked, a '*' is added to the 'res' div.
 btnMul.onclick = function() {
     res.innerHTML = res.innerHTML + '*';
 }
 
+// When 'btnDiv' is clicked, a '/' is added to the 'res' div.
 btnDiv.onclick = function() {
     res.innerHTML = res.innerHTML + '/';
 }
 
+// When 'btnClr' is clicked, the contents of the 'res' div is cleared.
 btnClr.onclick = function() {
     res.innerHTML = "";
 }
 
+// When 'btnEql' is clicked, the expression in the 'res' div is executed and the
+// result is displayed in the 'res' div.
 btnEql.onclick = function() {
     let result = 0;
     let operator = new Array;
     let operands = new Array;
+    // Global RegExp that matches the format of the operands. Since the global
+    // flag is passed, both operands are matched instead of just the first one.
     let operandsRegExp = new RegExp(/\d+/, 'g');
+    // RegExp that matches the format of the operators.
     let operatorRegExp = new RegExp(/\+|-|\*|\//);
 
     operator = res.innerHTML.match(operatorRegExp);
     operands = res.innerHTML.match(operandsRegExp);
 
+    // We convert the operands from base-2 to base-10.
     operands[0] = parseInt(operands[0], 2);
     operands[1] = parseInt(operands[1], 2);
 
+    // We evaluate the expression and use the Math.floor() function to ensure
+    // integer division.
     result = Math.floor(eval(operands[0] + operator + operands[1]));
+
+    // Finally, we display the result of the expression as a base-2 number.
     res.innerHTML = result.toString(2);
 }

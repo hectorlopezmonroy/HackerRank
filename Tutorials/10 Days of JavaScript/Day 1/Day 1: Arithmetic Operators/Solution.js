@@ -8,11 +8,11 @@
  *
  * Complete the following functions in the editor below:
  *
- *   1.- 'getArea(length, width)': Calculate and return the area of a rectangle
- *       having sides 'length' and 'width'.
+ *   1.- 'getArea(length, height)': Calculate and return the area of a rectangle
+ *       having sides 'length' and 'height'.
  *
- *   2.- 'getPerimeter(length, width)': Calculate and return the perimeter of a
- *       rectangle having sides 'length' and 'width'.
+ *   2.- 'getPerimeter(length, height)': Calculate and return the perimeter of a
+ *       rectangle having sides 'length' and 'height'.
  *
  * The values returned by these functions are printed to stdout by locked stub
  * code in the editor.
@@ -23,30 +23,30 @@
  * Data Type |   Parameter   |                   Description
  *   Number  |    length     | A number denoting the length of a rectangle.
  *           |               |
- *   Number  |     width     | A number denoting the length of a rectangle.
+ *   Number  |    height     | A number denoting the height of a rectangle.
  *           |               |
  *
  *                         getPerimeter(length, height)
  * Data Type |   Parameter   |                   Description
  *   Number  |    length     | A number denoting the length of a rectangle.
  *           |               |
- *   Number  |     width     | A number denoting the length of a rectangle.
+ *   Number  |    height     | A number denoting the height of a rectangle.
  *           |               |
  *
  * Constraints
  *
- * 1 <= length, width <= 1000
+ * 1 <= length, height <= 1000
  *
- * 'length' and 'width' are scaled to at most three decimal places.
+ * 'length' and 'height' are scaled to at most three decimal places.
  *
  * Output Format
  *
  *   Function    |  Return Type  |                   Description
  *    getArea    |    Number     | The area of a rectangle having sides 'length'
- *               |               | and 'width'.
+ *               |               | and 'height'.
  *               |               |
  * getPerimeter  |    Number     | The perimeter of a rectangle having sides
- *               |               | 'length' and 'width'.
+ *               |               | 'length' and 'height'.
  *               |               |
  *
  * Sample Input
@@ -61,9 +61,9 @@
  *
  * Explanation
  *
- * The area of the rectangle is length x width = 3 * 4.5 = 13.5.
+ * The area of the rectangle is length x height = 3 * 4.5 = 13.5.
  *
- * The perimeter of the rectangle is 2 * (length + width) = 2 * (3 + 4.5) = 15.
+ * The perimeter of the rectangle is 2 * (length + height) = 2 * (3 + 4.5) = 15.
  */
 
 'use strict';
@@ -94,14 +94,14 @@ function readLine() {
 *   Calculate the area of a rectangle.
 *
 *   length: The length of the rectangle.
-*   width: The width of the rectangle.
+*   height: The height of the rectangle.
 *
 *	Return a number denoting the rectangle's area.
 **/
-function getArea(length, width) {
+function getArea(length, height) {
     let area;
 
-    area = length * width;
+    area = length * height;
     return area;
 }
 
@@ -109,22 +109,21 @@ function getArea(length, width) {
 *   Calculate the perimeter of a rectangle.
 *
 *	length: The length of the rectangle.
-*   width: The width of the rectangle.
+*   height: The height of the rectangle.
 *
 *	Return a number denoting the perimeter of a rectangle.
 **/
-function getPerimeter(length, width) {
+function getPerimeter(length, height) {
     let perimeter;
 
-    perimeter = 2 * (length + width);
+    perimeter = 2 * (length + height);
     return perimeter;
 }
 
-
 function main() {
     const length = +(readLine());
-    const width = +(readLine());
+    const height = +(readLine());
 
-    console.log(getArea(length, width));
-    console.log(getPerimeter(length, width));
+    console.log(getArea(length, height));
+    console.log(getPerimeter(length, height));
 }
