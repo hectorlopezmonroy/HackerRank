@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 # Task
+#
 # Read two integers and print two lines. The first line should contain integer
 # division, 'a // b'. The second line should contain float division, 'a / b'.
 #
