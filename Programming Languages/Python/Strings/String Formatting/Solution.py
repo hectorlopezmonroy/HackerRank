@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 # Given an integer, 'n', print the following values for each integer 'i' from
 # '1' to 'n':
 #
