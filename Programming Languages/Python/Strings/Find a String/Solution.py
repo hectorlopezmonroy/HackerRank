@@ -52,10 +52,14 @@
 
 def count_substring(string, sub_string):
     res = 0
+
     for i in range(0, len(string)):
+
         if string[i] == sub_string[0]:
             cnt = 0
+
             for j in range(0, len(sub_string)):
+
                 if (i + len(sub_string) - 1 < len(string)):
                     if string[i + j] == sub_string[j]:
                         cnt += 1
@@ -63,9 +67,11 @@ def count_substring(string, sub_string):
                         break
                 else:
                     break
+
             if cnt == len(sub_string):
                 cnt = 0
                 res += 1
+
     return res
 
 if __name__ == '__main__':

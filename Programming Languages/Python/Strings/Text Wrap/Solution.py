@@ -6,6 +6,7 @@
 # Input Format
 #
 # The first line contains a string, 'S'.
+#
 # The second line contains the width, 'w'.
 #
 # Constraints
