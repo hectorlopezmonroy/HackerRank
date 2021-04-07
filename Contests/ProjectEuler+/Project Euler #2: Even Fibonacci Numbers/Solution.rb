@@ -13,8 +13,7 @@
 #
 # Constraints
 #
-# 1 <= T <= 10^5
-#
+#  1 <= T <= 10^5
 # 10 <= N <= 4 * 10^16
 #
 # Output Format
@@ -43,7 +42,7 @@ def even_fibonacci_numbers(n)
   res = n.zero? ? 0 : 2
   fibn2 = 1
   fibn1 = 2
-  i       = 2
+  i     = 2
 
   return 0 if n == 1
   return 2 if n == 2

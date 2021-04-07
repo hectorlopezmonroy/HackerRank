@@ -7,13 +7,12 @@
  *
  * Input Format
  *
- * First line contains 'T' that denotes the number of test cases. This is
- * followed by 'T' lines, each containing an integer, 'N'.
+ * First line contains 'T' that denotes the number of test cases.
+ * This is followed by 'T' lines, each containing an integer, 'N'.
  *
  * Constraints
  *
  * 1 <= T <= 10
- *
  * 1 <= N <= 40
  *
  * Output Format
@@ -48,40 +47,41 @@ import java.math.*;
 import java.util.regex.*;
 
 public class Solution {
-	
-	public static boolean isPrime(int n) {
-		boolean res = true;
 
-		for (int i = 2; i <= Math.sqrt(n); i++) {
-			if (n % i == 0) {
-				res = false;	
-				break;	
-			}
-		}
-		return res;
-	}
+    public static boolean isPrime(int n) {
+        boolean res = true;
 
-	public static Integer getSmallestMultiple(int n) {
-		int res = 1;
+        for (int i = 2; i <= Math.sqrt(n); i++) {
+            if (n % i == 0) {
+                res = false;
+                break;
+            }
+        }
+        return res;
+    }
 
-		for (int i = 2; i <= n; i++) {
-			if (res % i != 0) {
-				if (isPrime(i)) {
-					res = res * i;
-				} else {
-					res = res * (i / (res % i));
-				}
-			}
-		}
-		return res;
-	}
+    public static Integer getSmallestMultiple(int n) {
+        int res = 1;
 
-	public static void main(String[] args) {
-		Scanner in = new Scanner(System.in);
-		int t = in.nextInt();
-		for(int a0 = 0; a0 < t; a0++){
-			int n = in.nextInt();
-			System.out.println(getSmallestMultiple(n));
-		}
-	}
+        for (int i = 2; i <= n; i++) {
+            if (res % i != 0) {
+                if (isPrime(i)) {
+                    res = res * i;
+                } else {
+                    res = res * (i / (res % i));
+                }
+            }
+        }
+        return res;
+    }
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int t = in.nextInt();
+
+        for (int a0 = 0; a0 < t; a0++) {
+            int n = in.nextInt();
+            System.out.println(getSmallestMultiple(n));
+        }
+    }
 }

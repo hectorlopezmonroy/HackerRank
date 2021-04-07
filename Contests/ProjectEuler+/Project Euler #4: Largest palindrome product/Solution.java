@@ -1,9 +1,9 @@
 /*
- * A palindromic number reads the same both ways. The smallest 6 digit
- * palindrome made from the product of two 3-digit numbers is 101101 = 143 * 707.
+ * A palindromic number reads the same both ways. The smallest 6 digit palindrome
+ * made from the product of two 3-digit numbers is 101101 = 143 * 707.
  *
- * Find the largest palindrome made from the product of two 3-digit numbers
- * which is less than 'N'.
+ * Find the largest palindrome made from the product of two 3-digit numbers which
+ * is less than 'N'.
  *
  * Input Format
  *
@@ -62,7 +62,7 @@ public class Solution {
         boolean res = false;
         
         for (int i = 100; i < 1000 ; i++) {
-            if ((n % i == 0)) {
+            if (n % i == 0) {
                 int j = n / i;
                 if (100 <= j && j <= 999) {
                     res = true;
@@ -89,7 +89,7 @@ public class Solution {
         Scanner in = new Scanner(System.in);
         int t = in.nextInt();
    
-		for(int a0 = 0; a0 < t; a0++){
+        for (int a0 = 0; a0 < t; a0++) {
             int n = in.nextInt();
             System.out.println(largestPalindrome(n));
         }

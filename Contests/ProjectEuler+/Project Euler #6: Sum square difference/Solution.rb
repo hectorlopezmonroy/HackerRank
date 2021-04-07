@@ -15,7 +15,6 @@
 # Constraints
 #
 # 1 <= T <= 10^4
-#
 # 1 <= N <= 10^4
 #
 # Output Format

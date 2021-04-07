@@ -6,13 +6,12 @@
 #
 # Input Format
 #
-# First line contains 'T' that denotes the number of test cases. This is
-# followed by 'T' lines, each containing an integer, 'N'.
+# First line contains 'T' that denotes the number of test cases.
+# This is followed by 'T' lines, each containing an integer, 'N'.
 #
 # Constraints
 #
 # 1 <= T <= 10
-#
 # 1 <= N <= 40
 #
 # Output Format
