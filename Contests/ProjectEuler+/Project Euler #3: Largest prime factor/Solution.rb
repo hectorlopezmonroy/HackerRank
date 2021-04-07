@@ -4,8 +4,8 @@
 #
 # Input Format
 #
-# First line contains 'T', the number of test cases. This is followed by 'T'
-# lines each containing an integer 'N'.
+# First line contains 'T', the number of test cases.
+# This is followed by 'T' lines each containing an integer 'N'.
 #
 # Constraints
 #

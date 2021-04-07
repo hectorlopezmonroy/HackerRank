@@ -20,7 +20,6 @@
  * Constraints
  *
  * 5 <= n <= 200
- *
  * 0 <= rating_i <= 100
  *
  * It's guaranteed that there is at least one employee with a rating >= 90.

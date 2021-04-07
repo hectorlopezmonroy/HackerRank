@@ -8,8 +8,8 @@
 #
 # Input Format
 #
-# First line contains 'T' that denotes the number of test cases. This is
-# followed by 'T' lines, each containing an integer, 'N'.
+# First line contains 'T' that denotes the number of test cases.
+# This is followed by 'T' lines, each containing an integer, 'N'.
 #
 # Constraints
 #
@@ -39,7 +39,7 @@
 # !/bin/ruby
 
 def even_fibonacci_numbers(n)
-  res = n.zero? ? 0 : 2
+  res   = n.zero? ? 0 : 2
   fibn2 = 1
   fibn1 = 2
   i     = 2

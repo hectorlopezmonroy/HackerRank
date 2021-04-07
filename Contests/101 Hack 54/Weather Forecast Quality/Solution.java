@@ -12,7 +12,6 @@
  * Input Format
  *
  * The first line contains 7 space-separated integers t_1, t_2, ... , t_7.
- *
  * The second line contains 7 space-separated integers f_1, f_2, ... , f_7.
  *
  * Constraints
