@@ -69,7 +69,7 @@ public class Solution {
          *
          *    Finally, n^2 = 2 * (c^2 + ab + ac + bc)
          *
-         *  This means n must be a multiple of n for all conditions to hold!
+         *  This means n must be a multiple of 2 for all conditions to hold!
          */
         if (n % 2 != 0) {
             return max;
