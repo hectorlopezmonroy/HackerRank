@@ -52,12 +52,64 @@ public class Solution {
     private static int solution(int n) {
         int max = -1;
 
-        for (int c = n - 1; 2 < c; c--) {
-            for (int b = c - 1; 1 < b; b--) {
-                double a = Math.sqrt(Math.pow(c, 2) - Math.pow(b, 2));
+        /**
+         * Solving the following equations:
+         *
+         * Equation 1: a^2 + b^2 = c^c
+         * Equation 2: a + b + c = n
+         * Equation 3: (a + b + c)^2 = a^2 + ab + ac + ab + b^2 + bc + ac + bc + c^2
+         *
+         * Plugging Eq. 2 into Eq 3. we get:
+         *
+         *             n^2 = a^2 + b^2 + c^2 + 2ab + 2ac + 2bc
+         *
+         * Plugging Eq. 1 into the equation above:
+         *
+         *             n^2 = 2c^2 + 2(ab + ac + bc)
+         *
+         *    Finally, n^2 = 2 * (c^2 + ab + ac + bc)
+         *
+         *  This means n must be a multiple of n for all conditions to hold!
+         */
+        if (n % 2 != 0) {
+            return max;
+        }
 
-                if ((a < b && b < c) && (a % 1 == 0.0) && ((int) a + b + c == n)) {
-                    int product = (int) a * b * c;
+        /**
+         * If we sum the following two equations:
+         *                                         a < b
+         *                                         a < c
+         *
+         *                               We have: 2a < b + c
+         *                 Adding a to each side: 3a < a + b + c
+         *                   Using a + b + c = n:  a < n / 3
+         */
+        for (int a = 1; a < (n / 3); a++) {
+            /**
+             * Using the following equations:
+             *
+             * Equation 1: a + b + c = n
+             * Equation 2: a^2 + b^2 = c^2 -> c = sqrt(a^2 + b^2)
+             *
+             * Plugging Eq. 2 into Eq. 1:
+             *
+             *   a + b + sqrt(a^2 + b^2) = n
+             *   sqrt(a^2 + b^2) = (n - a - b)
+             *   sqrt(a^2 + b^2)^2 = (n - a - b)^2
+             *   a^2 + b^2 = n^2 - an - bn - an + a^2 + ab - bn + ab + b^2
+             *   0 = n^2 + 2ab - 2an - 2bn
+             *   n^2 = 2bn - 2ab + 2an
+             *   n^2 = b(2n - 2a) + 2an
+             *   n^2 - 2an = b(2 * (n - a))
+             *   b = (n^2 - 2an) / (2 * (n - a))
+             */
+            double b = ((n * n) - (2 * a * n)) / (2 * (n - a));
+
+            if (b % 1 == 0.0) {
+                int c = n - a - (int) b;
+
+                if ((a < b && b < c) && (a*a + b*b == c*c) && (a + b + c == n)) {
+                    int product = a * (int) b * c;
 
                     if (max < product) {
                         max = product;
