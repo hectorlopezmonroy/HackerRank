@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 # [itertools.product()](https://docs.python.org/2/library/itertools.html#itertools.product)
 # This tool computes the [cartesian product](https://en.wikipedia.org/wiki/Cartesian_product)
 # of input iterables.
@@ -26,6 +28,7 @@
 #  (2, 4, 7), (2, 4, 8), (2, 5, 7), (2, 5, 8), (3, 3, 7), (3, 3, 8), (3, 4, 7), (3, 4, 8), (3, 5, 7), (3, 5, 8)]
 #
 # Task
+#
 # You are given two lists 'A' and 'B'. Your task is to compute their cartesian product A x B.
 #
 # Example
@@ -56,3 +59,12 @@
 # Sample Output
 #
 # (1, 3) (1, 4) (2, 3) (2, 4)
+
+from itertools import product
+
+if __name__ == '__main__':
+    A = map(int, input().split())
+    B = map(int, input().split())
+    res = product(A, B)
+
+    print(*res)
