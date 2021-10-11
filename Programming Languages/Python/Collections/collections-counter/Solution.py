@@ -77,3 +77,21 @@
 # Customer 6: Size 10 not available, so no purchase.
 #
 # Total money earned = $55 + $45 + $40 + $60 = $200
+
+from collections import Counter
+
+if __name__ == '__main__':
+    X = int(input())
+    INVENTORY = Counter(map(int, input().split()))
+    N = int(input())
+    REVENUE = 0
+
+    for i in range(N):
+        SIZE_I, PRICE_I = map(int, input().split())
+        SIZE_COUNT = INVENTORY[SIZE_I]
+
+        if SIZE_COUNT > 0:
+            REVENUE += PRICE_I
+            INVENTORY[SIZE_I] = SIZE_COUNT - 1
+
+    print(REVENUE)
