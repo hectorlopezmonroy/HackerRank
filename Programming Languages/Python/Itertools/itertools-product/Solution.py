@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 # [itertools.product()](https://docs.python.org/2/library/itertools.html#itertools.product)
+#
 # This tool computes the [cartesian product](https://en.wikipedia.org/wiki/Cartesian_product)
 # of input iterables.
 #
